@@ -1,0 +1,6 @@
+module Pods_Pherapeutic_PherapeuticTests {
+  umbrella header "Pods-Pherapeutic-PherapeuticTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

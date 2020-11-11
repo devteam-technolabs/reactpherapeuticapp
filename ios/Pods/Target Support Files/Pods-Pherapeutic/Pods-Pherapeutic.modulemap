@@ -1,0 +1,6 @@
+module Pods_Pherapeutic {
+  umbrella header "Pods-Pherapeutic-umbrella.h"
+
+  export *
+  module * { export * }
+}
