@@ -13,7 +13,13 @@ import LoginScreen from '../screens/login';
 import SignUpScreen from '../screens/signUp';
 import MyProfileScreen from '../screens/myProfile';
 import ViewProfileScreen from '../screens/viewProfile';
+import EditProfileScreen from '../screens/editProfile';
 import VerifyOTPScreen from '../screens/verifyEmail';
+import OnboardingScreens from '../screens/onboarding';
+import AuthOtionsScreen from '../screens/authOptions';
+import GetStartedScreen from '../screens/getStarted';
+import ChangePasswordScreen from '../screens/changePassword';
+import TherapistStatusScreen from '../screens/therapistStatus';
 
 
 const Stack = createStackNavigator();
@@ -21,7 +27,10 @@ const Stack = createStackNavigator();
 const AuthStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }} >
+      <Stack.Screen name="GetStarted" component={GetStartedScreen} />
+      <Stack.Screen name="Onboarding" component={OnboardingScreens} />
       <Stack.Screen name="SignUp" header={null} component={SignUpScreen} />
+      <Stack.Screen name="AuthOptions" header={null} component={AuthOtionsScreen} />
       <Stack.Screen name="Login" header={null} component={LoginScreen} />
       <Stack.Screen name="VerifyEmail" header={null} component={VerifyOTPScreen} />
     </Stack.Navigator>
@@ -33,7 +42,10 @@ const AppStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }} >
       <Stack.Screen name="MyProfile" component={MyProfileScreen} />
+      <Stack.Screen name="TherapistStatus" component={TherapistStatusScreen} />
       <Stack.Screen name="ViewProfile" component={ViewProfileScreen} />
+      <Stack.Screen name="EditProfile" component={EditProfileScreen} />
+      <Stack.Screen name="ChangePassword" component={ChangePasswordScreen} />
     </Stack.Navigator>
   )
 };

@@ -27,6 +27,8 @@ const Login = (props) => {
   const [emailError, setEmailError] = useState('');
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlert] = useState('Please Fill email and password.');
+  const [passwordTick, setPasswordTick] = useState(false);
+  const [emailTick, setEmailTick] = useState(false);
 
   const { navigation, dispatch } = props;
 
@@ -35,22 +37,32 @@ const Login = (props) => {
       Events.trigger('showModalLoader');
       const loginObj = {
         email,
-        password
+        password,
+        device_type: "1",
+        fcm_token: "asdfhd7o54hg78tuh57fntg"
       };
       APICaller('login', 'POST', loginObj)
         .then(response => {
-          console.log('response => ', response);
+          console.log('response logging in => ', response['data']);
           const { data, message, status, statusCode } = response['data'];
           if (message == 'User loggedin successfully') {
-            AsyncStorage.setItem('userData', JSON.stringify(data));
-            dispatch(saveUser(data))
             Events.trigger('hideModalLoader');
-            navigation.navigate('app');
+            if (!data['is_email_verified']) {
+              setAlert("You can't login without verify emial.");
+              setShowAlert(true)
+            } else {
+              AsyncStorage.setItem('userData', JSON.stringify(data));
+              dispatch(saveUser(data))
+              navigation.navigate('app');
+            }
           }
         })
         .catch(error => {
-          Events.trigger('hideModalLoader');
-          console.log('error => ', error)
+          console.log('error logging in => ', error);
+          const { data, message, status, statusCode } = error['data'];
+          Events.trigger("hideModalLoader")
+          setAlert(message);
+          setShowAlert(true)
         })
     } else if (email && emailError && password) {
       setAlert('Email is not valid.')
@@ -66,12 +78,12 @@ const Login = (props) => {
       <Image source={constants.images.background} resizeMode={'stretch'} style={styles.containerBackground} />
       <Image source={constants.images.formsBackground} resizeMode={'stretch'} style={styles.formsBackground} />
       <View style={styles.backButtonView} >
-        <TouchableOpacity
-          onPress={() => navigation.goBack()}
+        <View
+          // onPress={() => navigation.goBack()}
           style={{ justifyContent: 'center', alignItems: 'center' }}
         >
-          <Image source={constants.images.backIcon} style={{ height: 18, width: 10, margin: 10 }} />
-        </TouchableOpacity>
+          {/* <Image source={constants.images.backIcon} style={{ height: 18, width: 10, margin: 10 }} /> */}
+        </View>
       </View>
       <View style={styles.logoView} >
         <Image source={constants.images.logo} style={{}} />
@@ -85,15 +97,23 @@ const Login = (props) => {
               <TextInput
                 style={styles.fieldInput}
                 placeholder={'john@gmail.com'}
+                returnKeyType={'done'}
                 placeholderTextColor={constants.colors.placeholder}
                 onChangeText={text => setEmail(text)}
                 value={email}
                 autoCapitalize={'none'}
-                onBlur={() => { if (email.length) setEmailError(validateEmail(email)) }}
+                onBlur={() => {
+                  if (email.length) {
+                    setEmailError(validateEmail(email))
+                    setEmailTick(true)
+                  } else {
+                    setEmailTick(false)
+                  }
+                }}
               />
               <View style={styles.ticWrap} >
                 {
-                  !email
+                  emailTick
                     ?
                     <Image source={constants.images.inputCheck} style={styles.tic} />
                     :
@@ -109,14 +129,21 @@ const Login = (props) => {
               <TextInput
                 style={styles.fieldInput}
                 placeholder={'password'}
+                returnKeyType={'done'}
                 placeholderTextColor={constants.colors.placeholder}
                 secureTextEntry={true}
                 onChangeText={text => setPassword(text)}
                 value={password}
+                onBlur={() => {
+                  if (password.length)
+                    setPasswordTick(true)
+                  else
+                    setPasswordTick(false)
+                }}
               />
               <View style={styles.ticWrap} >
                 {
-                  !email
+                  passwordTick
                     ?
                     <Image source={constants.images.inputCheck} style={styles.tic} />
                     :
@@ -126,10 +153,11 @@ const Login = (props) => {
             </View>
           </View>
 
-          <View style={[styles.formField, { flexDirection: 'row', justifyContent: 'flex-start', height: Dimensions.get('window').height * 0.03 }]} >
+          {/* <View style={[styles.formField, { flexDirection: 'row', justifyContent: 'flex-start', height: Dimensions.get('window').height * 0.03 }]} >
             <Image source={constants.images.radioButton} style={{ height: 20, width: 20, marginRight: 10 }} />
             <Text style={{ fontSize: 13, fontWeight: '500' }} >Remember Me</Text>
-          </View>
+          </View> */}
+          <View style={{ height: 10 }} />
 
           <View style={styles.rememberMeView} >
             <SubmitButton

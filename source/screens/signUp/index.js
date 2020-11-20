@@ -19,26 +19,6 @@ import Events from '../../utils/events';
 import { validateEmail } from '../../utils/validateStrings';
 import AwesomeAlert from 'react-native-awesome-alerts';
 
-// {
-//   "first_name":"First",
-//   "last_name":"Last",
-//   "email":"Qazww@gmail.com",
-//   "password":"qazwsxedc",
-//   "confirm_password":"qazwsxedc",
-//   "role":"Client",
-//   "language_id":"1"
-// }
-
-// {
-// "first_name":"First",
-// "last_name":"Last",
-// "role":"Client",
-// "language_id":"1",
-// "email":"Qazww@gmail.com",
-// "password":"qazwsxedc",
-// "confirm_password":"qazwsxedc"
-// }
-
 const { height, width } = Dimensions.get('window');
 
 const SignUp = (props) => {
@@ -53,7 +33,12 @@ const SignUp = (props) => {
   const [language_id, setLanguage_id] = useState('');
   const [showRoles, setShowRoles] = useState(false);
   const [showLanguages, setShowLanguages] = useState(false);
+  const [showSpecialism, setShowSpecialism] = useState(false);
+  const [selectedSpeciality, setSpeciality] = useState('');
+  const [speciality_id, setSpeciality_id] = useState('');
+  const [years, setYears] = useState('');
   const [languages, storeLanguages] = useState([]);
+  const [specialities, storeSpecialities] = useState([]);
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlert] = useState('Please Fill All Fields');
   const [readyToSubmit, setReadyToSibmit] = useState(true);
@@ -61,7 +46,8 @@ const SignUp = (props) => {
   const { navigation } = props;
 
   useEffect(() => {
-    getLanguages()
+    getLanguages();
+    getSpecialities();
   }, [])
 
   const getLanguages = () => {
@@ -78,18 +64,63 @@ const SignUp = (props) => {
       })
   }
 
+  const getSpecialities = () => {
+    APICaller('getTherapistTypes', 'GET')
+      .then(response => {
+        console.log("response getting specialiites => ", response);
+        const { data, message, status, statusCode } = response['data'];
+        if (status === 'success') {
+          storeSpecialities([...data]);
+        }
+      })
+      .catch(error => {
+        console.log("error getting specialiites => ", error)
+      })
+  }
+
+  const registerUser = () => {
+    Events.trigger("showModalLoader")
+    const registerObj = {
+      first_name,
+      last_name,
+      email,
+      password,
+      confirm_password,
+      role: role == 'Client' ? "0" : "1",
+      languages: [language_id],
+
+      experience: years,
+      specialism: [speciality_id],
+
+      device_type: "1",
+      fcm_token: "poiytr4677y7ttgtttg",
+      qualification: "5",
+      address: "ABC place",
+      latitude: "56",
+      longitude: "555"
+
+    }
+    console.log('register object => ', registerObj)
+    APICaller('register', 'POST', registerObj)
+      .then(response => {
+        Events.trigger("hideModalLoader");
+        console.warn('response after register => ', response);
+        const { data, message, status, statusCode } = response['data']
+        // const { message } = data;
+        if (message === "Your account created successfully.") {
+          navigation.navigate('VerifyEmail', { user_id: data['user_id'] })
+        }
+      })
+      .catch(error => {
+        console.warn('error after register => ', error);
+        const { data } = error;
+        Events.trigger("hideModalLoader")
+        setAlert(data.message);
+        setShowAlert(true)
+      })
+  }
+
   const signUpHandler = () => {
-    console.log("first_name!! => ", first_name);
-    console.log("last_name!! => ", last_name);
-    console.log("email!! => ", email);
-    console.log("password!! => ", password);
-    console.log("confirm_password!! => ", confirm_password);
-    console.log("role!! => ", role);
-    console.log("language_id!! => ", language_id);
-
-
-
-
     if (first_name &&
       last_name &&
       email &&
@@ -99,31 +130,21 @@ const SignUp = (props) => {
       language_id &&
       password === confirm_password
     ) {
-      Events.trigger("showModalLoader")
-      const registerObj = {
-        first_name,
-        last_name,
-        email,
-        password,
-        confirm_password,
-        role: role == 'Client' ? "1" : "1",
-        languages: [language_id]
+      if (role == "Therapist") {
+        if (!years) {
+          setAlert('Please Enter Total Experience.')
+          setShowAlert(true)
+        } else if (!selectedSpeciality) {
+          setAlert('Please Select Speciality')
+          setShowAlert(true);
+        } else {
+          // call api
+          registerUser();
+        }
+      } else {
+        // call api
+        registerUser();
       }
-      console.log('register object => ', registerObj)
-      APICaller('register', 'POST', registerObj)
-        .then(response => {
-          Events.trigger("hideModalLoader");
-          console.warn('response after register => ', response);
-          const { data, message, status, statusCode } = response['data']
-          // const { message } = data;
-          if (message === "Your account created successfully.") {
-            navigation.navigate('VerifyEmail', { user_id: data['user_id'] })
-          }
-        })
-        .catch(error => {
-          console.warn('error after register => ', error);
-          Events.trigger("hideModalLoader")
-        })
     } else {
       if (!first_name)
         setAlert('Please Enter First Name.')
@@ -131,7 +152,7 @@ const SignUp = (props) => {
         setAlert('Please Enter Last Name.')
       else if (!email)
         setAlert('Please Enter Email Address.')
-        else if (emailError)
+      else if (emailError)
         setAlert('Please Enter Valid Email Address.')
       else if (!password)
         setAlert('Please Enter Password.')
@@ -168,6 +189,35 @@ const SignUp = (props) => {
               }}
             >
               <Text>{lang['title']}</Text>
+            </TouchableOpacity>
+          )
+        }
+        )
+      }
+    </View>
+  )
+
+  const SpecialitiesList = () => (
+    <View style={{ justifyContent: 'center', alignItems: 'center' }} >
+      {
+        specialities.map(speciality => {
+          console.log("!!!!!!!!!!")
+          return (
+            <TouchableOpacity
+              onPress={() => {
+                setSpeciality_id(speciality['id']);
+                setSpeciality(speciality['title'])
+                setShowSpecialism(false)
+              }}
+              style={{
+                height: Dimensions.get('window').height * 0.05,
+                width: Dimensions.get('window').width * 0.6,
+                paddingHorizontal: 2,
+                justifyContent: 'center',
+                alignItems: 'flex-start'
+              }}
+            >
+              <Text>{speciality['title']}</Text>
             </TouchableOpacity>
           )
         }
@@ -218,7 +268,7 @@ const SignUp = (props) => {
       keyboardVerticalOffset={'60'}
       behavior={'padding'}
     >
-      <View style={styles.container} >
+      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.container} >
         <Image source={constants.images.background} resizeMode={'stretch'} style={styles.containerBackground} />
         <Image source={constants.images.formsBackground} resizeMode={'stretch'} style={styles.formsBackground} />
         <View style={styles.backButtonView} >
@@ -226,9 +276,9 @@ const SignUp = (props) => {
             onPress={() => navigation.goBack()}
             style={{ flex: 1.5, justifyContent: 'center', alignItems: 'center' }}
           >
-            <Image source={constants.images.backIcon} style={{ height: 18, width: 10, margin: 10 }} />
+            {/* <Image source={constants.images.backIcon} style={{ height: 18, width: 10, margin: 10 }} /> */}
           </TouchableOpacity>
-          <View style={{ flex: 7, justifyContent: 'center', alignItems: 'center' }} >
+          <View style={{ flex: 7, justifyContent: 'center', alignItems: 'center', }} >
             <Image
               source={constants.images.logo}
               resizeMode={'contain'}
@@ -309,6 +359,7 @@ const SignUp = (props) => {
                 />
               </View>
             </View>
+
             <View style={styles.formField} >
               <Text style={styles.fieldName} >ARE YOU A THERAPIST OR A CLIENT?</Text>
               <View style={styles.fieldInputWrap} >
@@ -326,6 +377,45 @@ const SignUp = (props) => {
               </View>
             </View>
 
+            {
+              role == "Therapist"
+                ?
+                <View style={{ justifyContent: 'center', alignItems: 'center' }} >
+                  <View style={styles.formField} >
+                    <Text style={styles.fieldName} >SPECIALISM</Text>
+                    <View style={styles.fieldInputWrap} >
+                      <TextInput
+                        style={[styles.fieldInput, { width: Dimensions.get("window").width * 0.7 }]}
+                        // onChangeText={text => setLanguage(text)}
+                        value={selectedSpeciality}
+                        editable={false}
+                        autoCompleteType={'off'}
+                        autoCorrect={false}
+                      />
+                      <TouchableOpacity onPress={() => setShowSpecialism(true)} >
+                        <Image style={{ height: 25, width: 25, margin: 3 }} source={constants.images.downArrow} />
+                      </TouchableOpacity>
+                    </View>
+                  </View>
+
+                  <View style={styles.formField} >
+                    <Text style={styles.fieldName} >YEARS OF EXPERIENCE</Text>
+                    <View style={styles.fieldInputWrap} >
+                      <TextInput
+                        style={styles.fieldInput}
+                        onChangeText={text => setYears(text)}
+                        value={years}
+                        autoCompleteType={'off'}
+                        autoCorrect={false}
+                        keyboardType={'number-pad'}
+                      />
+                    </View>
+                  </View>
+                </View>
+                :
+                <View />
+            }
+
             <View style={styles.formField} >
               <Text style={styles.fieldName} >LANGUAGE YOU SPEAK</Text>
               <View style={styles.fieldInputWrap} >
@@ -334,8 +424,6 @@ const SignUp = (props) => {
                   onChangeText={text => setLanguage(text)}
                   value={language}
                   editable={false}
-                  autoCompleteType={'off'}
-                  autoCorrect={false}
                 />
                 <TouchableOpacity onPress={() => setShowLanguages(true)} >
                   <Image style={{ height: 25, width: 25, margin: 3 }} source={constants.images.downArrow} />
@@ -358,7 +446,19 @@ const SignUp = (props) => {
             style={{ borderBottomColor: '#ffffff', borderBottomWidth: 1 }}
           >Terms & Conditions.</Text></Text>
         </View>
-      </View>
+      </ScrollView>
+
+      <AwesomeAlert
+        show={showRoles}
+        closeOnTouchOutside={true}
+        onConfirmPressed={() => {
+          setShowRoles(false)
+        }}
+        onDismiss={() => {
+          setShowRoles(false)
+        }}
+        customView={<Roles />}
+      />
 
       <AwesomeAlert
         show={showLanguages}
@@ -372,16 +472,17 @@ const SignUp = (props) => {
         customView={<ListView />}
       />
       <AwesomeAlert
-        show={showRoles}
+        show={showSpecialism}
         closeOnTouchOutside={true}
         onConfirmPressed={() => {
-          setShowRoles(false)
+          setShowSpecialism(false)
         }}
         onDismiss={() => {
-          setShowRoles(false)
+          setShowSpecialism(false)
         }}
-        customView={<Roles />}
+        customView={<SpecialitiesList />}
       />
+
       <AwesomeAlert
         show={showAlert}
         showProgress={false}

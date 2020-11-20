@@ -3,15 +3,14 @@ import axios from 'axios';
 
 const apiStaticPath = 'https://pherapeutic.itechnolabs.tech/api/v1/';
 
-const APICaller = (endpoint, method, body, contentType, Authorization) =>
+const APICaller = (endpoint, method, body, headers) =>
   axios({
     url: `${apiStaticPath}${endpoint}`,
     method: method || 'GET',
     data: body,
-    headers: {
-      Accept: "application/json, text/plain, */*",
-      "Content-Type": contentType || 'application/json',
-      "Authorization": `Bearer ${Authorization}` || null
+    headers: headers || {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
     },
     responseType: 'json'
   })

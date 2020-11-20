@@ -23,26 +23,6 @@ import { saveUser } from '../../redux/actions/user';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { connect } from 'react-redux'
 
-// {
-//   "first_name":"First",
-//   "last_name":"Last",
-//   "email":"Qazww@gmail.com",
-//   "password":"qazwsxedc",
-//   "confirm_password":"qazwsxedc",
-//   "role":"Client",
-//   "language_id":"1"
-// }
-
-// {
-// "first_name":"First",
-// "last_name":"Last",
-// "role":"Client",
-// "language_id":"1",
-// "email":"Qazww@gmail.com",
-// "password":"qazwsxedc",
-// "confirm_password":"qazwsxedc"
-// }
-
 const { height, width } = Dimensions.get('window');
 
 const VerifyOTP = (props) => {
@@ -69,7 +49,7 @@ const VerifyOTP = (props) => {
             AsyncStorage.setItem('userData', JSON.stringify(data));
             dispatch(saveUser(data))
             Events.trigger('hideModalLoader');
-            navigation.navigate('app');
+            navigation.navigate('Onboarding');
           } else {
             console.log('wrong otp');
             setShowAlert(true);

@@ -219,6 +219,13 @@
 			remoteGlobalIDString = 65D0A19C165FA1126B1360680FE6DB12;
 			remoteInfo = Yoga;
 		};
+		CA5BA89C2564394900ED44FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B058F035CFD84ECBF8414E4EAE5834FC;
+			remoteInfo = "react-native-video";
+		};
 		CA5E042625526A240084C960 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
@@ -267,6 +274,55 @@
 			proxyType = 2;
 			remoteGlobalIDString = 50B5347C9A6E93B7D4CFC3673BA6FB7E;
 			remoteInfo = RNScreens;
+		};
+		CA92BE342566DC6200DBFCCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5CA9E6FE438CE79CD76FA3B34CC95836;
+			remoteInfo = "Google-Maps-iOS-Utils";
+		};
+		CA92BE362566DC6200DBFCCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F7D4CFD8007E1491802305A2021EB56D;
+			remoteInfo = "react-native-google-maps";
+		};
+		CA92BE382566DC6200DBFCCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F955107B98F1B5213C3C9F4CAB1EDB5;
+			remoteInfo = "react-native-maps";
+		};
+		CAE4E2A12566555C00B10182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3AEA4A114C08533A2C0F8E039A4C5EB9;
+			remoteInfo = RNImageCropPicker;
+		};
+		CAE4E2A32566555C00B10182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3DCCC9C42EB3E07CFD81800EC8A2515D;
+			remoteInfo = "RNImageCropPicker-QBImagePicker";
+		};
+		CAE4E2A52566555C00B10182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7862C607B7BE0510C2D65193F9B4B4F9;
+			remoteInfo = TOCropViewController;
+		};
+		CAE4E2A72566555C00B10182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FE1E812071397E31AE21DFF368B781B1;
+			remoteInfo = "TOCropViewController-TOCropViewControllerBundle";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -438,6 +494,7 @@
 				CA275C292550353E009A72FC /* libFBReactNativeSpec.a */,
 				CA275C392550353E009A72FC /* libFolly.a */,
 				CA275C3B2550353E009A72FC /* libglog.a */,
+				CA92BE352566DC6200DBFCCD /* libGoogle-Maps-iOS-Utils.a */,
 				CA275C3D2550353E009A72FC /* libPods-Pherapeutic.a */,
 				CA275C3F2550353E009A72FC /* libPods-Pherapeutic-PherapeuticTests.a */,
 				CA275C412550353E009A72FC /* libPods-Pherapeutic-tvOS.a */,
@@ -450,7 +507,10 @@
 				CA275C4F2550353E009A72FC /* libReact-jsi.a */,
 				CA275C512550353E009A72FC /* libReact-jsiexecutor.a */,
 				CA275C532550353E009A72FC /* libReact-jsinspector.a */,
+				CA92BE372566DC6200DBFCCD /* libreact-native-google-maps.a */,
+				CA92BE392566DC6200DBFCCD /* libreact-native-maps.a */,
 				CA5E042925526A240084C960 /* libreact-native-safe-area-context.a */,
+				CA5BA89D2564394900ED44FE /* libreact-native-video.a */,
 				CA275C552550353E009A72FC /* libReact-RCTAnimation.a */,
 				CA275C572550353E009A72FC /* libReact-RCTBlob.a */,
 				CA275C592550353E009A72FC /* libReact-RCTImage.a */,
@@ -463,8 +523,12 @@
 				CA5E042B25526A240084C960 /* libRNCAsyncStorage.a */,
 				CA5E042D25526A240084C960 /* libRNCMaskedView.a */,
 				CA5E042F25526A240084C960 /* libRNGestureHandler.a */,
+				CAE4E2A22566555C00B10182 /* libRNImageCropPicker.a */,
+				CAE4E2A42566555C00B10182 /* QBImagePicker.bundle */,
 				CA5E043125526A240084C960 /* libRNReanimated.a */,
 				CA5E043325526A240084C960 /* libRNScreens.a */,
+				CAE4E2A62566555C00B10182 /* libTOCropViewController.a */,
+				CAE4E2A82566555C00B10182 /* TOCropViewControllerBundle.bundle */,
 				CA275C672550353E009A72FC /* libYoga.a */,
 			);
 			name = Products;
@@ -566,8 +630,9 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = YG6SRDRW2J;
 						LastSwiftMigration = 1120;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -790,6 +855,13 @@
 			remoteRef = CA275C662550353E009A72FC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		CA5BA89D2564394900ED44FE /* libreact-native-video.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libreact-native-video.a";
+			remoteRef = CA5BA89C2564394900ED44FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		CA5E042725526A240084C960 /* libBVLinearGradient.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -839,6 +911,55 @@
 			remoteRef = CA5E043225526A240084C960 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		CA92BE352566DC6200DBFCCD /* libGoogle-Maps-iOS-Utils.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libGoogle-Maps-iOS-Utils.a";
+			remoteRef = CA92BE342566DC6200DBFCCD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA92BE372566DC6200DBFCCD /* libreact-native-google-maps.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libreact-native-google-maps.a";
+			remoteRef = CA92BE362566DC6200DBFCCD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA92BE392566DC6200DBFCCD /* libreact-native-maps.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libreact-native-maps.a";
+			remoteRef = CA92BE382566DC6200DBFCCD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CAE4E2A22566555C00B10182 /* libRNImageCropPicker.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNImageCropPicker.a;
+			remoteRef = CAE4E2A12566555C00B10182 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CAE4E2A42566555C00B10182 /* QBImagePicker.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QBImagePicker.bundle;
+			remoteRef = CAE4E2A32566555C00B10182 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CAE4E2A62566555C00B10182 /* libTOCropViewController.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTOCropViewController.a;
+			remoteRef = CAE4E2A52566555C00B10182 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CAE4E2A82566555C00B10182 /* TOCropViewControllerBundle.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TOCropViewControllerBundle.bundle;
+			remoteRef = CAE4E2A72566555C00B10182 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -883,11 +1004,17 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Pherapeutic/Pods-Pherapeutic-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RNImageCropPicker/QBImagePicker.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/TOCropViewController/TOCropViewControllerBundle.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QBImagePicker.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TOCropViewControllerBundle.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1017,11 +1144,17 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Pherapeutic-PherapeuticTests/Pods-Pherapeutic-PherapeuticTests-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RNImageCropPicker/QBImagePicker.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/TOCropViewController/TOCropViewControllerBundle.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QBImagePicker.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TOCropViewControllerBundle.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1169,9 +1302,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 0.0.2;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.0.11;
+				DEVELOPMENT_TEAM = YG6SRDRW2J;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Pherapeutic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1197,9 +1330,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 0.0.2;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.0.11;
+				DEVELOPMENT_TEAM = YG6SRDRW2J;
 				INFOPLIST_FILE = Pherapeutic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

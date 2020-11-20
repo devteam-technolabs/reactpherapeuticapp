@@ -6,26 +6,19 @@ import {
   StyleSheet,
   Dimensions,
   Image,
-  TextInput
+  TextInput,
+  Switch
 } from 'react-native';
 import constants from '../../utils/constants';
 import styles from './styles';
 import LogoutAlert from '../../components/logoutAlert';
 import { connect } from 'react-redux';
-const { height, width } = Dimensions.get('window');
 
-// {
-//   "first_name":"First",
-//   "last_name":"Lasst",
-//   "email":"qazwsx@gmail.com",
-//   "password":"qwerty4321",
-//   "confirm_password":"qwerty4321",
-//   "role":"Client",
-//   "language_id":"1"
-// }
+const { height, width } = Dimensions.get('window');
 
 const MyProfile = (props) => {
   const [showModal, setShowModal] = useState(false);
+  const [switchValue, setSwitchValue] = useState(false);
 
   const { navigation, userData, dispatch } = props;
   const {
@@ -35,7 +28,7 @@ const MyProfile = (props) => {
     is_email_verified,
     language_id,
     last_name,
-
+    role
   } = userData;
 
   return (
@@ -70,6 +63,21 @@ const MyProfile = (props) => {
               </TouchableOpacity>
             </View>
           </View>
+          {
+            role == '1'
+              ?
+              <View style={styles.probonoWrap} >
+                <Text style={styles.itemNameText} >Are you open for doing pro bono work</Text>
+                <Switch
+                  trackColor={'rgb(223,223,223)'}
+                  thumbColor={constants.colors.darkGreen}
+                  onValueChange={value => setSwitchValue(value)}
+                  value={switchValue}
+                />
+              </View>
+              :
+              <View />
+          }
         </View>
 
         <View style={styles.optionsWrap} >
@@ -83,8 +91,28 @@ const MyProfile = (props) => {
               <Image source={constants.images.nextArrow} />
             </View>
           </View>
-
-          <View style={styles.optionItem} >
+          {
+            role == 1
+            ?
+            <TouchableOpacity
+            onPress={() => navigation.navigate('TherapistStatus')}
+            style={styles.optionItem}
+          >
+            <View style={styles.optionNameView} >
+              <Image source={constants.images.changePassword} resizeMode={'contain'} style={styles.optionImage} />
+              <Text style={styles.itemNameText} >Change Online Status</Text>
+            </View>
+            <View style={styles.nextArrowWrap} >
+              <Image source={constants.images.nextArrow} />
+            </View>
+          </TouchableOpacity>
+          :
+          <View />
+          }
+          <TouchableOpacity
+            onPress={() => navigation.navigate('ChangePassword')}
+            style={styles.optionItem}
+          >
             <View style={styles.optionNameView} >
               <Image source={constants.images.changePassword} resizeMode={'contain'} style={styles.optionImage} />
               <Text style={styles.itemNameText} >Change Password</Text>
@@ -92,7 +120,7 @@ const MyProfile = (props) => {
             <View style={styles.nextArrowWrap} >
               <Image source={constants.images.nextArrow} />
             </View>
-          </View>
+          </TouchableOpacity>
 
           <View style={styles.optionItem} >
             <View style={styles.optionNameView} >

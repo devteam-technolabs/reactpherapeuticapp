@@ -5,7 +5,7 @@ const { height, width } = Dimensions.get('window');
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -33,20 +33,25 @@ export default StyleSheet.create({
     alignItems: 'center'
   },
   backButtonView: {
-    flex: 1.5,
+    // flex: 1.5,
+    height: height * 0.15,
     width,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center'
   },
   formView: {
-    flex: 7.5,
+    // flex: 7.5,
+    // height: height * 0.75,
+    width,
     justifyContent: 'flex-start',
     alignItems: 'center',
     paddingTop: height * 0.01
   },
   footerView: {
-    flex: 1,
+    // flex: 1,
+    height: height * 0.1,
+    width,
     justifyContent: 'space-around',
     alignItems: 'center',
     paddingBottom: 10,

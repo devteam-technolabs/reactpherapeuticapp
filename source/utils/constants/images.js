@@ -15,9 +15,31 @@ import backArrowWhite from '../../../assets/images/backArrowWhite.png';
 import defaultUserImage from '../../../assets/images/defaultProfile.jpeg';
 import downArrow from '../../../assets/images/downArrow.png';
 import inputCheck from '../../../assets/images/inputCheck.png';
-import radioButton from '../../../assets/images/radioButtonIN.png'
+import radioButton from '../../../assets/images/radioButtonIN.png';
+import onboard_5 from '../../../assets/images/splash_5.png';
+import onboard_4 from '../../../assets/images/splash_4.png';
+import onboard_3 from '../../../assets/images/splash_3.png';
+import onboard_2 from '../../../assets/images/splash_2.png';
+import onboard_1 from '../../../assets/images/splash_1.png';
+import ic_edit from '../../../assets/images/ic_edit.png';
+import ic_fb from '../../../assets/images/ic_facebook.png';
+import ic_google from '../../../assets/images/ic_google.png';
+import ic_location from '../../../assets/images/ic_location.png';
+import ic_menu from '../../../assets/images/ic_menu.png';
+import playPause from '../../../assets/images/playPause.png';
 
 export default {
+  ic_menu,
+  ic_location,
+  playPause,
+  ic_fb,
+  ic_google,
+  onboard_1,
+  onboard_2,
+  onboard_3,
+  onboard_4,
+  onboard_5,
+  ic_edit,
   radioButton,
   logo,
   background,

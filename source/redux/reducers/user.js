@@ -3,7 +3,7 @@ import ActionTypes from '../types';
 const initialState = {
   loginStatus: false,
   userData: {},
-  userProfile: {}
+  userToken: ''
 };
 
 const user = (state = initialState, action) => {
@@ -15,11 +15,12 @@ const user = (state = initialState, action) => {
       });
     case ActionTypes.SAVE_USER:
       return Object.assign({}, state, {
-        userData: action.payload
+        userData: action.payload,
+        userToken: action.payload.auth_token
       });
     case ActionTypes.SAVE_USER_PROFILE:
       return Object.assign({}, state, {
-        userProfile: action.payload
+        userData: action.payload
       });
     default:
       return state;

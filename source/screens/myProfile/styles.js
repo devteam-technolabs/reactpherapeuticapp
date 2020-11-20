@@ -69,6 +69,13 @@ export default StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row'
   },
+  probonoWrap: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    width: '100%',
+    margin: height * 0.02
+  },
   profileImageWrap: {
     height: height * 0.09,
     width: height * 0.09,
@@ -80,7 +87,7 @@ export default StyleSheet.create({
     paddingVertical: height * 0.01,
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    
+
   },
   profileView: {
     width: width * 0.9,

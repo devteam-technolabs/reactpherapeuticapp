@@ -97,12 +97,12 @@ const LogoutAlert = (props) => {
                 setShowModal(false)
                 navigation.navigate('auth', { screen: 'Login' });
               }}
-              style={[styles.buttons, { backgroundColor: 'rgb(191,54,160)', marginRight: 30 }]}
+              style={[styles.buttons, { backgroundColor: '#25D0E1', marginRight: 30 }]}
             >
               <Text style={styles.buttonText} >Sure</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={[styles.buttons, { backgroundColor: 'rgb(63,216,242)', marginLeft: 30 }]}
+              style={[styles.buttons, { backgroundColor: '#ededed', marginLeft: 30 }]}
               onPress={() => setShowModal(false)}
             >
               <Text style={styles.buttonText} >Cancel</Text>

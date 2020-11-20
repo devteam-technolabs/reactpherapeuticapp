@@ -11,5 +11,7 @@ export default {
   formBackground: 'rgb(204,204,204)',
   darkGreen: 'rgb(11,135,149)',
   lightGreen: 'rgb(39,215,233)',
-  greenText: 'rgb(24,173,189)'
+  greenText: 'rgb(24,173,189)',
+  dot: 'rgb(24,173,189)',
+  activeDot: 'rgb(54,99,92)'
 }
