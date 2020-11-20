@@ -29,9 +29,10 @@ export default function App() {
   return (
     <Provider store={store} style={{ flex: 1 }}>
       <View style={styles.safeAreaView}>
-        <StatusBar barStyle = 'light-content' hidden = {false}  translucent = {false} />
-      <Image source={constants.images.background} resizeMode={'stretch'} style={styles.containerBackground} />
-        <SafeAreaView  />
+        {/* <SafeAreaView style={{ backgroundColor: 'transparent' }} /> */}
+        <StatusBar barStyle='light-content' hidden={false} translucent={false} />
+        {/* <Image source={constants.images.background} resizeMode={'stretch'} style={styles.containerBackground} /> */}
+        {/* <SafeAreaView /> */}
         <AppNavigator />
         <ModalLoader
           data={loaderData}

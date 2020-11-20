@@ -10,14 +10,14 @@ import {
   ScrollView,
   KeyboardAvoidingView
 } from 'react-native';
-import constants from '../../utils/constants';
 import styles from './styles';
-import SubmitButton from '../../components/submitButton';
-import APICaller from '../../utils/APICaller';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import Events from '../../utils/events';
 import { validateEmail } from '../../utils/validateStrings';
 import AwesomeAlert from 'react-native-awesome-alerts';
+import constants from '../../utils/constants';
+import Events from '../../utils/events';
+import APICaller from '../../utils/APICaller';
+import SubmitButton from '../../components/submitButton';
 
 const { height, width } = Dimensions.get('window');
 

@@ -22,7 +22,7 @@ export default StyleSheet.create({
   formsBackground: {
     width,
     position: 'absolute',
-    top: -(height * 0.28),
+    top: -(height * 0.1),
     left: 0,
     right: 0,
     zIndex: -1

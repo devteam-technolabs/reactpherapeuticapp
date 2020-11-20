@@ -13,5 +13,7 @@ export default {
   lightGreen: 'rgb(39,215,233)',
   greenText: 'rgb(24,173,189)',
   dot: 'rgb(24,173,189)',
-  activeDot: 'rgb(54,99,92)'
+  activeDot: 'rgb(54,99,92)',
+  questionText: 'rgb(22,22,22)',
+  questionBackground: 'rgb(204,204,204)',
 }

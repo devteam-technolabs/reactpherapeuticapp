@@ -51,7 +51,7 @@ const OnboardingScreens = (props) => {
     return (
       <View style={styles.backButtonView} >
         <TouchableOpacity
-          onPress={() => navigation.navigate('app')}
+          onPress={() => navigation.navigate('app', { screen: 'Home' })}
           style={{ justifyContent: 'center', alignItems: 'center' }}
         >
           <LinearGradient
@@ -89,9 +89,7 @@ const OnboardingScreens = (props) => {
       activeDot={<ActiveDot />}
       showsButtons={false}
       scrollEnabled={true}
-      // automaticallyAdjustContentInsets={true}
       horizontal={true}
-    // onIndexChanged={index => { if (index == 4) { navigation.navigate('app') } }}
     >
       <View style={styles.container} >
         <Image
@@ -205,7 +203,7 @@ const OnboardingScreens = (props) => {
 
             <SubmitButton
               title={`Let's Go`}
-              submitFunction={() => navigation.navigate('app')}
+              submitFunction={() => navigation.navigate('app', { screen: 'Home' })}
             />
           </View>
         </View>
