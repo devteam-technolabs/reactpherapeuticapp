@@ -1,0 +1,419 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:1:1-27:12
+MERGED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:1:1-27:12
+MERGED from [com.facebook.flipper:flipper:0.54.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/c1067936e5e2f9bffa0611fce9370373/flipper-0.54.0/AndroidManifest.xml:8:1-18:12
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.54.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/d38b8cca6bc3891033403fba20e82fcf/flipper-network-plugin-0.54.0/AndroidManifest.xml:8:1-15:12
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/5b60840ee097361908c33fb2da71d33d/flipper-fresco-plugin-0.54.0/AndroidManifest.xml:8:1-15:12
+MERGED from [:react-native-async-storage_async-storage] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-community_masked-view] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-gesture-handler] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-34:12
+MERGED from [:react-native-maps] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-12:12
+MERGED from [:react-native-reanimated] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-safe-area-context] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-screens] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-video] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-video/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.react:react-native:0.63.3] /Users/shubham/.gradle/caches/transforms-2/files-2.1/b74b59db78d39894cde1fcf29d71a133/jetified-react-native-0.63.3/AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/8f2261455e63cc16e5fa26d0644abdc5/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [org.webkit:android-jsc:r245459] /Users/shubham/.gradle/caches/transforms-2/files-2.1/78001e6aa2137c8a33873a9c97820e7f/android-jsc-r245459/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-linear-gradient] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.fresco:flipper:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/227c557d8526247ac9f25738a9a088f4/flipper-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:stetho:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9d86e744b19848ed3963b4b17f7d1804/stetho-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fresco:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/3f1cfb8bf5630dbacbdd7eb542e26b21/fresco-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9a3fd318dbba288a52b42c2ac1a09fc2/imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ef320477a2c221dbea574c41926f034f/drawee-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/28751152116fecdc909713420740c998/nativeimagefilters-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-native:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9b23d38c2934e2eff65316f1ae979da4/memory-type-native-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-java:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/f1e214b1869d1f10ce50f7cc4509446e/memory-type-java-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-native:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/53aaa6337e80fc6e3ac32685c396f3ab/imagepipeline-native-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/7fac32991b6007e6d67bc076854892ed/memory-type-ashmem-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/4d43e8034f7c48d0bad97391cc0f34ce/imagepipeline-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/49f58922feecfc439299b27030b7a05a/nativeimagetranscoder-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ae78d994b81cde0c4b34326fe37a4660/imagepipeline-base-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:soloader:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/5d3d4a02a8a4680656c1e5b21f7d5fc5/soloader-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.9.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/2f1ab5177402cfea2e7d5f190a0d3272/soloader-0.9.0/AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.yalantis:ucrop:2.2.6-native] /Users/shubham/.gradle/caches/transforms-2/files-2.1/3d8fbef9369a986d6717a4ca0f3c6943/ucrop-2.2.6-native/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.material:material:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/4fc9edd97bdb4d841f273730f55ff5b8/material-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9f42ebdec41b17d6a955acb45dba5c67/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/1a7eb7e6a6c6fd9dbc42a87e1f28dfb6/play-services-location-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/de66cbed76ca7306c613af6f99282411/play-services-base-17.0.0/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/6ea939f68764683307eb91e9324a13e9/play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/c619f4e0e872ae066e4f0ec0b0806b73/play-services-places-placereport-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ec4c86f212ef174cd5c401835d645251/jetified-play-services-basement-17.0.0/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/71b9afcc05e999c518ecede7761dfd54/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.2.1] /Users/shubham/.gradle/caches/transforms-2/files-2.1/e93d73a5e2fbb088d38fd1f299780492/fragment-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/7a1c2ad2382ed90b3c02213b18727828/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/f45c040a4a0af8b7b85e0c8a75aba788/appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9d97fe283c1bcd7a3652a74e594223b7/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/6dd05e88fd0d2c0f4cb1ee29552b849e/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/0badc3b0577e6879ae78b6569d990c55/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/96fca87079bfbc933e3b3947a23f94ec/activity-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/62c17d35f32389c3692c1481167fa1aa/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/cde572439181e04bdb49109e8b0a4a15/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/b5dd36a353979432987e1924967e9be1/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/fd1117b12f395cb0558fe2670c1c186f/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/8e54a02a3b9f376cf03bad9497309b04/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/877ff2614da090610c4548c4a67f846d/core-1.1.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/70aa37e599f746c69238138f944c9bc9/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/3bfc1c7eec0c13314b2d24928d9ddf39/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] /Users/shubham/.gradle/caches/transforms-2/files-2.1/5ce95dacddafef2c985f422a4aecb99a/exifinterface-1.1.0-beta01/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9b2114ee814ed08f46700e3cf35004c9/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/2cb884fe954753715841cfff8e6e7259/lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/cdf6a1e5f9477a138e7acd96d7e24701/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/fd3b2d36328c2df8840b114986ac8542/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/6b6f671f1ae1d1966f52fe99a51272da/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/86bc55fa0bc90d1f622e76a7643b25c5/savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/af9f19aa93f60894180e66b9dc67b3d9/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/eb347f37dc3a935bba28a5d7cb616f53/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/d918b1d50fac981d79a788c156c0367b/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/shubham/.gradle/caches/transforms-2/files-2.1/022d0fc837fe8cccfd847c6af4c7284d/jetified-android-maps-utils-0.5/AndroidManifest.xml:2:1-13:12
+MERGED from [com.yqritc:android-scalablevideoview:1.0.4] /Users/shubham/.gradle/caches/transforms-2/files-2.1/2535ecf57e4d59b924e52beaca29264f/jetified-android-scalablevideoview-1.0.4/AndroidManifest.xml:2:1-12:12
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/b4d3f48ed4276619709a1a48393921eb/jetified-fbcore-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:ui-common:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/1019df51206ff60f4833a2b4bef27459/ui-common-2.2.0/AndroidManifest.xml:2:1-9:12
+INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+	package
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:2:3-28
+		INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:2:3-28
+		INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:1:1-27:12
+		INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:1:1-27:12
+		INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from [com.facebook.flipper:flipper:0.54.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/c1067936e5e2f9bffa0611fce9370373/flipper-0.54.0/AndroidManifest.xml:15:5-67
+MERGED from [com.facebook.flipper:flipper:0.54.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/c1067936e5e2f9bffa0611fce9370373/flipper-0.54.0/AndroidManifest.xml:15:5-67
+MERGED from [:react-native-maps] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:react-native-maps] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:4:22-64
+application
+ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:6:5-25:19
+MERGED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:6:5-25:19
+MERGED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:6:5-25:19
+MERGED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:5-32:19
+MERGED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:5-32:19
+MERGED from [com.facebook.react:react-native:0.63.3] /Users/shubham/.gradle/caches/transforms-2/files-2.1/b74b59db78d39894cde1fcf29d71a133/jetified-react-native-0.63.3/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.63.3] /Users/shubham/.gradle/caches/transforms-2/files-2.1/b74b59db78d39894cde1fcf29d71a133/jetified-react-native-0.63.3/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.9.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/2f1ab5177402cfea2e7d5f190a0d3272/soloader-0.9.0/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.9.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/2f1ab5177402cfea2e7d5f190a0d3272/soloader-0.9.0/AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.material:material:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/4fc9edd97bdb4d841f273730f55ff5b8/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/4fc9edd97bdb4d841f273730f55ff5b8/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/1a7eb7e6a6c6fd9dbc42a87e1f28dfb6/play-services-location-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/1a7eb7e6a6c6fd9dbc42a87e1f28dfb6/play-services-location-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/de66cbed76ca7306c613af6f99282411/play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/de66cbed76ca7306c613af6f99282411/play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/6ea939f68764683307eb91e9324a13e9/play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/6ea939f68764683307eb91e9324a13e9/play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/c619f4e0e872ae066e4f0ec0b0806b73/play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/c619f4e0e872ae066e4f0ec0b0806b73/play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ec4c86f212ef174cd5c401835d645251/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ec4c86f212ef174cd5c401835d645251/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/877ff2614da090610c4548c4a67f846d/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/877ff2614da090610c4548c4a67f846d/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9b2114ee814ed08f46700e3cf35004c9/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9b2114ee814ed08f46700e3cf35004c9/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/shubham/.gradle/caches/transforms-2/files-2.1/022d0fc837fe8cccfd847c6af4c7284d/jetified-android-maps-utils-0.5/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/shubham/.gradle/caches/transforms-2/files-2.1/022d0fc837fe8cccfd847c6af4c7284d/jetified-android-maps-utils-0.5/AndroidManifest.xml:7:5-11:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/877ff2614da090610c4548c4a67f846d/core-1.1.0/AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:8:7-39
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:8:7-39
+	tools:ignore
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml:7:75-114
+	android:roundIcon
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:10:7-52
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:10:7-52
+	tools:targetApi
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml:7:54-74
+	android:icon
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:9:7-41
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:9:7-41
+	android:allowBackup
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:11:7-34
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:11:7-34
+	android:theme
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:12:7-38
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:12:7-38
+	android:usesCleartextTraffic
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml:7:18-53
+	android:name
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:7:7-38
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:7:7-38
+activity#com.pherapeutic.MainActivity
+ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:13:7-23:18
+	android:label
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:15:9-41
+	android:launchMode
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:17:9-40
+	android:windowSoftInputMode
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:18:9-51
+	android:configChanges
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:16:9-86
+	android:name
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:14:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:19:9-22:25
+action#android.intent.action.MAIN
+ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:20:13-65
+	android:name
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:20:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:21:13-73
+	android:name
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:21:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:24:7-84
+	android:name
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:24:17-81
+uses-sdk
+INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml
+MERGED from [com.facebook.flipper:flipper:0.54.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/c1067936e5e2f9bffa0611fce9370373/flipper-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper:0.54.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/c1067936e5e2f9bffa0611fce9370373/flipper-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.54.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/d38b8cca6bc3891033403fba20e82fcf/flipper-network-plugin-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.54.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/d38b8cca6bc3891033403fba20e82fcf/flipper-network-plugin-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/5b60840ee097361908c33fb2da71d33d/flipper-fresco-plugin-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/5b60840ee097361908c33fb2da71d33d/flipper-fresco-plugin-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [:react-native-async-storage_async-storage] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-async-storage_async-storage] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_masked-view] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_masked-view] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-gesture-handler] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-8:41
+MERGED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-8:41
+MERGED from [:react-native-maps] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-maps] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-reanimated] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-safe-area-context] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-safe-area-context] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-screens] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-screens] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-video] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-video/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-video] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-video/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.63.3] /Users/shubham/.gradle/caches/transforms-2/files-2.1/b74b59db78d39894cde1fcf29d71a133/jetified-react-native-0.63.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.63.3] /Users/shubham/.gradle/caches/transforms-2/files-2.1/b74b59db78d39894cde1fcf29d71a133/jetified-react-native-0.63.3/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/8f2261455e63cc16e5fa26d0644abdc5/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/8f2261455e63cc16e5fa26d0644abdc5/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [org.webkit:android-jsc:r245459] /Users/shubham/.gradle/caches/transforms-2/files-2.1/78001e6aa2137c8a33873a9c97820e7f/android-jsc-r245459/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /Users/shubham/.gradle/caches/transforms-2/files-2.1/78001e6aa2137c8a33873a9c97820e7f/android-jsc-r245459/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-linear-gradient] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-linear-gradient] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.fresco:flipper:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/227c557d8526247ac9f25738a9a088f4/flipper-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:flipper:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/227c557d8526247ac9f25738a9a088f4/flipper-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:stetho:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9d86e744b19848ed3963b4b17f7d1804/stetho-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:stetho:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9d86e744b19848ed3963b4b17f7d1804/stetho-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/3f1cfb8bf5630dbacbdd7eb542e26b21/fresco-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/3f1cfb8bf5630dbacbdd7eb542e26b21/fresco-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9a3fd318dbba288a52b42c2ac1a09fc2/imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9a3fd318dbba288a52b42c2ac1a09fc2/imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ef320477a2c221dbea574c41926f034f/drawee-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ef320477a2c221dbea574c41926f034f/drawee-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/28751152116fecdc909713420740c998/nativeimagefilters-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/28751152116fecdc909713420740c998/nativeimagefilters-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-native:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9b23d38c2934e2eff65316f1ae979da4/memory-type-native-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-native:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9b23d38c2934e2eff65316f1ae979da4/memory-type-native-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-java:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/f1e214b1869d1f10ce50f7cc4509446e/memory-type-java-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-java:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/f1e214b1869d1f10ce50f7cc4509446e/memory-type-java-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-native:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/53aaa6337e80fc6e3ac32685c396f3ab/imagepipeline-native-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-native:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/53aaa6337e80fc6e3ac32685c396f3ab/imagepipeline-native-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/7fac32991b6007e6d67bc076854892ed/memory-type-ashmem-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/7fac32991b6007e6d67bc076854892ed/memory-type-ashmem-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/4d43e8034f7c48d0bad97391cc0f34ce/imagepipeline-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/4d43e8034f7c48d0bad97391cc0f34ce/imagepipeline-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/49f58922feecfc439299b27030b7a05a/nativeimagetranscoder-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/49f58922feecfc439299b27030b7a05a/nativeimagetranscoder-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ae78d994b81cde0c4b34326fe37a4660/imagepipeline-base-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ae78d994b81cde0c4b34326fe37a4660/imagepipeline-base-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:soloader:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/5d3d4a02a8a4680656c1e5b21f7d5fc5/soloader-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:soloader:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/5d3d4a02a8a4680656c1e5b21f7d5fc5/soloader-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.9.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/2f1ab5177402cfea2e7d5f190a0d3272/soloader-0.9.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.9.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/2f1ab5177402cfea2e7d5f190a0d3272/soloader-0.9.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.6-native] /Users/shubham/.gradle/caches/transforms-2/files-2.1/3d8fbef9369a986d6717a4ca0f3c6943/ucrop-2.2.6-native/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.6-native] /Users/shubham/.gradle/caches/transforms-2/files-2.1/3d8fbef9369a986d6717a4ca0f3c6943/ucrop-2.2.6-native/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.material:material:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/4fc9edd97bdb4d841f273730f55ff5b8/material-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/4fc9edd97bdb4d841f273730f55ff5b8/material-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9f42ebdec41b17d6a955acb45dba5c67/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9f42ebdec41b17d6a955acb45dba5c67/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/1a7eb7e6a6c6fd9dbc42a87e1f28dfb6/play-services-location-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/1a7eb7e6a6c6fd9dbc42a87e1f28dfb6/play-services-location-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/de66cbed76ca7306c613af6f99282411/play-services-base-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/de66cbed76ca7306c613af6f99282411/play-services-base-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/6ea939f68764683307eb91e9324a13e9/play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/6ea939f68764683307eb91e9324a13e9/play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/c619f4e0e872ae066e4f0ec0b0806b73/play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/c619f4e0e872ae066e4f0ec0b0806b73/play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ec4c86f212ef174cd5c401835d645251/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ec4c86f212ef174cd5c401835d645251/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/71b9afcc05e999c518ecede7761dfd54/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/71b9afcc05e999c518ecede7761dfd54/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.1] /Users/shubham/.gradle/caches/transforms-2/files-2.1/e93d73a5e2fbb088d38fd1f299780492/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.1] /Users/shubham/.gradle/caches/transforms-2/files-2.1/e93d73a5e2fbb088d38fd1f299780492/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/7a1c2ad2382ed90b3c02213b18727828/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/7a1c2ad2382ed90b3c02213b18727828/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/f45c040a4a0af8b7b85e0c8a75aba788/appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/f45c040a4a0af8b7b85e0c8a75aba788/appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9d97fe283c1bcd7a3652a74e594223b7/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9d97fe283c1bcd7a3652a74e594223b7/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/6dd05e88fd0d2c0f4cb1ee29552b849e/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/6dd05e88fd0d2c0f4cb1ee29552b849e/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/0badc3b0577e6879ae78b6569d990c55/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/0badc3b0577e6879ae78b6569d990c55/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/96fca87079bfbc933e3b3947a23f94ec/activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/96fca87079bfbc933e3b3947a23f94ec/activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/62c17d35f32389c3692c1481167fa1aa/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/62c17d35f32389c3692c1481167fa1aa/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/cde572439181e04bdb49109e8b0a4a15/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/cde572439181e04bdb49109e8b0a4a15/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/b5dd36a353979432987e1924967e9be1/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/b5dd36a353979432987e1924967e9be1/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/fd1117b12f395cb0558fe2670c1c186f/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/fd1117b12f395cb0558fe2670c1c186f/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/8e54a02a3b9f376cf03bad9497309b04/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/8e54a02a3b9f376cf03bad9497309b04/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/877ff2614da090610c4548c4a67f846d/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/877ff2614da090610c4548c4a67f846d/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/70aa37e599f746c69238138f944c9bc9/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/70aa37e599f746c69238138f944c9bc9/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/3bfc1c7eec0c13314b2d24928d9ddf39/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/3bfc1c7eec0c13314b2d24928d9ddf39/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] /Users/shubham/.gradle/caches/transforms-2/files-2.1/5ce95dacddafef2c985f422a4aecb99a/exifinterface-1.1.0-beta01/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] /Users/shubham/.gradle/caches/transforms-2/files-2.1/5ce95dacddafef2c985f422a4aecb99a/exifinterface-1.1.0-beta01/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9b2114ee814ed08f46700e3cf35004c9/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/9b2114ee814ed08f46700e3cf35004c9/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/2cb884fe954753715841cfff8e6e7259/lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/2cb884fe954753715841cfff8e6e7259/lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/cdf6a1e5f9477a138e7acd96d7e24701/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/cdf6a1e5f9477a138e7acd96d7e24701/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/fd3b2d36328c2df8840b114986ac8542/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/fd3b2d36328c2df8840b114986ac8542/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/6b6f671f1ae1d1966f52fe99a51272da/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/6b6f671f1ae1d1966f52fe99a51272da/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/86bc55fa0bc90d1f622e76a7643b25c5/savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/86bc55fa0bc90d1f622e76a7643b25c5/savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/af9f19aa93f60894180e66b9dc67b3d9/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/af9f19aa93f60894180e66b9dc67b3d9/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/eb347f37dc3a935bba28a5d7cb616f53/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/eb347f37dc3a935bba28a5d7cb616f53/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/d918b1d50fac981d79a788c156c0367b/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/d918b1d50fac981d79a788c156c0367b/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/shubham/.gradle/caches/transforms-2/files-2.1/022d0fc837fe8cccfd847c6af4c7284d/jetified-android-maps-utils-0.5/AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/shubham/.gradle/caches/transforms-2/files-2.1/022d0fc837fe8cccfd847c6af4c7284d/jetified-android-maps-utils-0.5/AndroidManifest.xml:5:5-43
+MERGED from [com.yqritc:android-scalablevideoview:1.0.4] /Users/shubham/.gradle/caches/transforms-2/files-2.1/2535ecf57e4d59b924e52beaca29264f/jetified-android-scalablevideoview-1.0.4/AndroidManifest.xml:8:5-10:41
+MERGED from [com.yqritc:android-scalablevideoview:1.0.4] /Users/shubham/.gradle/caches/transforms-2/files-2.1/2535ecf57e4d59b924e52beaca29264f/jetified-android-scalablevideoview-1.0.4/AndroidManifest.xml:8:5-10:41
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/b4d3f48ed4276619709a1a48393921eb/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/b4d3f48ed4276619709a1a48393921eb/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:ui-common:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/1019df51206ff60f4833a2b4bef27459/ui-common-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:ui-common:2.2.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/1019df51206ff60f4833a2b4bef27459/ui-common-2.2.0/AndroidManifest.xml:5:5-7:41
+INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml:5:5-77
+	android:name
+		ADDED from /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml:5:22-75
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [com.facebook.flipper:flipper:0.54.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/c1067936e5e2f9bffa0611fce9370373/flipper-0.54.0/AndroidManifest.xml:16:5-76
+	android:name
+		ADDED from [com.facebook.flipper:flipper:0.54.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/c1067936e5e2f9bffa0611fce9370373/flipper-0.54.0/AndroidManifest.xml:16:22-73
+queries
+ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-14:15
+intent
+ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-13:18
+action#android.media.action.IMAGE_CAPTURE
+ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-73
+	android:name
+		ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:21-70
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:22-78
+provider#androidx.core.content.FileProvider
+ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:9-27:20
+	android:grantUriPermissions
+		ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-47
+	android:authorities
+		ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-60
+	android:exported
+		ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-37
+	android:name
+		ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-62
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-26:58
+	android:resource
+		ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-55
+	android:name
+		ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
+activity#com.yalantis.ucrop.UCropActivity
+ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:9-31:72
+	android:theme
+		ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:13-69
+	android:name
+		ADDED from [:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:13-60
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from [:react-native-maps] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from [:react-native-maps] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:22-78
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:23:22-76
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/de66cbed76ca7306c613af6f99282411/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/de66cbed76ca7306c613af6f99282411/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/de66cbed76ca7306c613af6f99282411/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/de66cbed76ca7306c613af6f99282411/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ec4c86f212ef174cd5c401835d645251/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/shubham/.gradle/caches/transforms-2/files-2.1/022d0fc837fe8cccfd847c6af4c7284d/jetified-android-maps-utils-0.5/AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/shubham/.gradle/caches/transforms-2/files-2.1/022d0fc837fe8cccfd847c6af4c7284d/jetified-android-maps-utils-0.5/AndroidManifest.xml:8:9-10:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ec4c86f212ef174cd5c401835d645251/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ec4c86f212ef174cd5c401835d645251/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
