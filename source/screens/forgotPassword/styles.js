@@ -22,33 +22,11 @@ export default StyleSheet.create({
   formsBackground: {
     width,
     position: 'absolute',
-    top: -(height * 0.1),
+    top: -(height * 0.08),
     left: 0,
     right: 0,
     zIndex: -1
   },
-  buttonsWrap: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: height * 0.012
-  },
-  continueText: {
-    fontSize: 13,
-    color: constants.colors.white,
-    fontWeight: '500'
-  },
-  continueTextWrap: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: height * 0.02
-  },
-
-
-
-
-
-
-
   backButtonView: {
     flex: 1.2,
     paddingHorizontal: width * 0.05,
@@ -64,7 +42,7 @@ export default StyleSheet.create({
   formView: {
     flex: 6,
     justifyContent: 'flex-start',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   footerView: {
     flex: 1,

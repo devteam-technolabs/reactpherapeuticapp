@@ -69,7 +69,8 @@ const styles = StyleSheet.create({
   logoutText: {
     color: constants.colors.black,
     fontSize: 18,
-    fontWeight: '600'
+    fontWeight: '600',
+    lineHeight: 25
   }
 });
 
@@ -88,7 +89,8 @@ const LogoutAlert = (props) => {
       <View style={styles.cover} >
         <View style={styles.contentWrapper} >
           <View style={styles.upperView} >
-            <Text style={styles.logoutText} >Are you sure, you want to logout?</Text>
+            <Text style={styles.logoutText} >Are you sure, you want</Text>
+            <Text style={styles.logoutText} >to logout?</Text>
           </View>
           <View style={styles.lowerView} >
             <TouchableOpacity
@@ -97,12 +99,12 @@ const LogoutAlert = (props) => {
                 setShowModal(false)
                 navigation.navigate('auth', { screen: 'Login' });
               }}
-              style={[styles.buttons, { backgroundColor: '#25D0E1', marginRight: 30 }]}
+              style={[styles.buttons, { backgroundColor: '#25D0E1', marginRight: 25 }]}
             >
               <Text style={styles.buttonText} >Sure</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={[styles.buttons, { backgroundColor: '#ededed', marginLeft: 30 }]}
+              style={[styles.buttons, { backgroundColor: '#ededed', marginLeft: 25 }]}
               onPress={() => setShowModal(false)}
             >
               <Text style={styles.buttonText} >Cancel</Text>

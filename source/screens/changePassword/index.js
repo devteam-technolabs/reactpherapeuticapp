@@ -145,7 +145,7 @@ const ChangePassword = (props) => {
         closeOnTouchOutside={true}
         showConfirmButton={true}
         confirmText="Confirm"
-        confirmButtonColor={constants.colors.pink}
+        confirmButtonColor={constants.colors.lightGreen}
         onCancelPressed={() => {
           setShowAlert(false);
           if (success)

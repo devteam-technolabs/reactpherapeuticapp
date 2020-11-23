@@ -33,33 +33,25 @@ const Login = (props) => {
 
   const { navigation, dispatch } = props;
 
-  const loginHandler = () => {
-    if (email && !emailError && password) {
+  const sendOtp = () => {
+    if (email && !emailError) {
       Events.trigger('showModalLoader');
-      const loginObj = {
-        email,
-        password,
-        device_type: "1",
-        fcm_token: "asdfhd7o54hg78tuh57fntg"
-      };
-      APICaller('login', 'POST', loginObj)
+      const endpoint = 'user/forgotPassword';
+      const method = 'POST';
+      const body = { email };
+
+      APICaller(endpoint, method, body)
         .then(response => {
-          console.log('response logging in => ', response['data']);
+          console.log('response sending OTP => ', response['data']);
           const { data, message, status, statusCode } = response['data'];
-          if (message == 'User loggedin successfully') {
+          if (status == 'success') {
             Events.trigger('hideModalLoader');
-            if (!data['is_email_verified']) {
-              setAlert("You can't login without verify emial.");
+              setAlert("Please Verify OTP");
               setShowAlert(true)
-            } else {
-              AsyncStorage.setItem('userData', JSON.stringify(data));
-              dispatch(saveUser(data))
-              navigation.navigate('app', { screen: 'Home' });
-            }
           }
         })
         .catch(error => {
-          console.log('error logging in => ', error);
+          console.log('error sending OTP => ', error);
           const { data, message, status, statusCode } = error['data'];
           Events.trigger("hideModalLoader")
           setAlert(message);
@@ -127,52 +119,17 @@ const Login = (props) => {
                 </View>
               </View>
             </View>
-
-            <View style={styles.formField} >
-              <Text style={styles.fieldName} >PASSWORD</Text>
-              <View style={styles.fieldInputWrap} >
-                <TextInput
-                  style={styles.fieldInput}
-                  placeholder={'password'}
-                  returnKeyType={'done'}
-                  placeholderTextColor={constants.colors.placeholder}
-                  secureTextEntry={true}
-                  onChangeText={text => setPassword(text)}
-                  value={password}
-                  onBlur={() => {
-                    if (password.length)
-                      setPasswordTick(true)
-                    else
-                      setPasswordTick(false)
-                  }}
-                />
-                <View style={styles.ticWrap} >
-                  {
-                    passwordTick
-                      ?
-                      <Image source={constants.images.inputCheck} style={styles.tic} />
-                      :
-                      <View />
-                  }
-                </View>
-              </View>
-            </View>
-
-            {/* <View style={[styles.formField, { flexDirection: 'row', justifyContent: 'flex-start', height: Dimensions.get('window').height * 0.03 }]} >
-            <Image source={constants.images.radioButton} style={{ height: 20, width: 20, marginRight: 10 }} />
-            <Text style={{ fontSize: 13, fontWeight: '500' }} >Remember Me</Text>
-          </View> */}
             <View style={{ height: 10 }} />
 
             <View style={styles.rememberMeView} >
               <SubmitButton
-                title={'LOGIN'}
+                title={'SUBMIT'}
                 colors={['rgb(62, 218, 243)', 'rgb(191, 53, 160)']}
-                submitFunction={() => loginHandler()}
+                submitFunction={() => sendOtp()}
               />
             </View>
             <View style={styles.forgotPasswordView} >
-              <Text style={styles.forgotPasswordText} >Forgot Password?</Text>
+              <Text style={styles.forgotPasswordText} ></Text>
             </View>
           </View>
         </View>

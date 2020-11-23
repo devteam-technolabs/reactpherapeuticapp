@@ -34,7 +34,7 @@ export default StyleSheet.create({
   },
   backButtonWrap: { 
     justifyContent: 'center',
-     alignItems: 'center', 
+     alignItems: 'flex-start', 
      flex: 1, 
      height: height * 0.05,
     },

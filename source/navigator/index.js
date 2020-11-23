@@ -22,6 +22,7 @@ import ChangePasswordScreen from '../screens/changePassword';
 import TherapistStatusScreen from '../screens/therapistStatus';
 import QuestionBotScreen from '../screens/questionBot';
 import HomeScreen from '../screens/home';
+import ForgotPasswordScreen from '../screens/forgotPassword';
 
 
 const Stack = createStackNavigator();
@@ -29,11 +30,12 @@ const Stack = createStackNavigator();
 const AuthStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }} >
+      <Stack.Screen name="AuthOptions" header={null} component={AuthOtionsScreen} />
+      <Stack.Screen name="Login" header={null} component={LoginScreen} />
       <Stack.Screen name="GetStarted" component={GetStartedScreen} />
       <Stack.Screen name="Onboarding" component={OnboardingScreens} />
       <Stack.Screen name="SignUp" header={null} component={SignUpScreen} />
-      <Stack.Screen name="AuthOptions" header={null} component={AuthOtionsScreen} />
-      <Stack.Screen name="Login" header={null} component={LoginScreen} />
+      <Stack.Screen name="ForgotPassword" header={null} component={ForgotPasswordScreen} />
       <Stack.Screen name="VerifyEmail" header={null} component={VerifyOTPScreen} />
     </Stack.Navigator>
   );

@@ -15,6 +15,7 @@ import constants from '../../utils/constants';
 import Events from '../../utils/events';
 import APICaller from '../../utils/APICaller';
 import SubmitButton from '../../components/submitButton';
+import LinearGradient from 'react-native-linear-gradient';
 const { height, width } = Dimensions.get('window');
 
 const QuestionBot = (props) => {
@@ -94,12 +95,38 @@ const QuestionBot = (props) => {
           >
             <Image source={constants.images.backArrowWhite} style={{ height: 18, width: 10, margin: 10 }} />
           </TouchableOpacity>
-          <View style={{ flex: 8, justifyContent: 'center', alignItems: 'center' }} >
+          <View style={{ flex: 4, justifyContent: 'center', alignItems: 'center' }} >
             <Text style={styles.headingText} >To get started, we just</Text>
             <Text style={styles.headingText} >need to learn a bit</Text>
             <Text style={styles.headingText} >more about you</Text>
           </View>
-          <View style={{ flex: 1 }} />
+          <View style={{ flex: 1 }} >
+            <TouchableOpacity
+              onPress={() => navigation.navigate('MyProfile')}
+              style={{ justifyContent: 'center', alignItems: 'center' }}
+            >
+              <LinearGradient
+                start={{ x: 0, y: 1 }}
+                end={{ x: 1, y: 1 }}
+                colors={["#228994", "#3BD8E5"]}
+                style={{
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  height: Dimensions.get('window').height * 0.032,
+                  width: Dimensions.get('window').width * 0.15,
+                  borderRadius: 3,
+                }}
+              >
+                <Text
+                  style={{
+                    color: constants.colors.white,
+                    fontWeight: '500',
+                    fontSize: 13
+                  }}
+                >{'Skip'}</Text>
+              </LinearGradient>
+            </TouchableOpacity>
+          </View>
         </View>
         {
           questionsList.length
@@ -113,7 +140,7 @@ const QuestionBot = (props) => {
         }
         <View style={{ justifyContent: 'center', alignItems: 'center', marginBottom: height * 0.05, marginTop: height * 0.08 }} >
           <SubmitButton
-            title={(noOfAnswers == questionsList.length ) ? 'CONTINUE' : 'SKIP'}
+            title={'CONTINUE'}
             submitFunction={() => navigation.navigate('MyProfile')}
           />
         </View>
@@ -126,7 +153,7 @@ const QuestionBot = (props) => {
         closeOnTouchOutside={true}
         showConfirmButton={true}
         confirmText="Confirm"
-        confirmButtonColor={constants.colors.pink}
+        confirmButtonColor={constants.colors.lightGreen}
         onCancelPressed={() => {
           setShowAlert(false);
         }}
