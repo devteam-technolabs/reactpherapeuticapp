@@ -13,6 +13,7 @@ import styles from './styles';
 import constants from '../../utils/constants';
 import APICaller from '../../utils/APICaller';
 import { saveUserProfile } from '../../redux/actions/user';
+import AwesomeAlert from 'react-native-awesome-alerts';
 
 const mapStyle = [
   {
@@ -176,6 +177,7 @@ const mapStyle = [
 ];
 
 const TherapistStatus = (props) => {
+  const[showAlert,setShowAlert] = useState(false)
 
   const { userToken, userData, navigation, dispatch } = props;
   const { online_status } = userData;
@@ -199,7 +201,7 @@ const TherapistStatus = (props) => {
         if (status === 'success') {
           dispatch(saveUserProfile(data));
           // setAlert('Profile Update Successfully')
-          // setShowAlert(true)
+          setShowAlert(true)
         }
       })
       .catch(error => {
@@ -212,7 +214,7 @@ const TherapistStatus = (props) => {
       <Image source={constants.images.background} resizeMode={'stretch'} style={styles.containerBackground} />
       <View style={styles.headerView} >
         <TouchableOpacity
-          onPress={() => navigation.goBack()}
+          // onPress={() => navigation.goBack()}
           style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }}
         >
           <Image source={constants.images.ic_menu} style={{ height: 14.1, width: 18.3, margin: 10 }} />
@@ -258,6 +260,27 @@ const TherapistStatus = (props) => {
         </TouchableOpacity>
       </View>
       <View style={styles.headerView} />
+      <AwesomeAlert
+        show={showAlert}
+        showProgress={false}
+        message={online_status == 1 ? "You've swiched to Online mode" : "You've swiched to Offline mode"}
+        closeOnTouchOutside={true}
+        showConfirmButton={true}
+        confirmText="Confirm"
+        confirmButtonColor={constants.colors.pink}
+        onCancelPressed={() => {
+          setShowAlert(false);
+          navigation.navigate('MyProfile')
+        }}
+        onConfirmPressed={() => {
+          setShowAlert(false);
+          navigation.navigate('MyProfile')
+        }}
+        onDismiss={() => {
+          setShowAlert(false);
+          navigation.navigate('MyProfile')
+        }}
+      />
     </View>
   )
 }

@@ -20,7 +20,10 @@ import AuthOtionsScreen from '../screens/authOptions';
 import GetStartedScreen from '../screens/getStarted';
 import ChangePasswordScreen from '../screens/changePassword';
 import TherapistStatusScreen from '../screens/therapistStatus';
-
+import QuestionBotScreen from '../screens/questionBot';
+import HomeScreen from '../screens/home';
+import mapScreen from '../screens/mapScreen';
+import mapDetailScreen from '../screens/mapDetailScreen';
 
 const Stack = createStackNavigator();
 
@@ -40,12 +43,16 @@ const AuthStack = () => {
 
 const AppStack = () => {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }} >
+    <Stack.Navigator initialRouteName={'Home'} screenOptions={{ headerShown: false }} >
+      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="QuestionBot" component={QuestionBotScreen} />
       <Stack.Screen name="MyProfile" component={MyProfileScreen} />
       <Stack.Screen name="TherapistStatus" component={TherapistStatusScreen} />
       <Stack.Screen name="ViewProfile" component={ViewProfileScreen} />
       <Stack.Screen name="EditProfile" component={EditProfileScreen} />
       <Stack.Screen name="ChangePassword" component={ChangePasswordScreen} />
+      <Stack.Screen name="MapScreen" component={mapScreen} />
+      <Stack.Screen name="MapDetailScreen" component={mapDetailScreen} />
     </Stack.Navigator>
   )
 };
@@ -85,7 +92,7 @@ const RootNavigator = (props) => {
           alignItems: 'center',
           height: Dimensions.get("window").height,
           width: Dimensions.get("window").width,
-          backgroundColor: '#ffffff'
+          backgroundColor: 'transparent'
         }}
       >
         <SkypeIndicator color={constants.colors.pink} />

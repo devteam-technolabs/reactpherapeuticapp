@@ -27,6 +27,7 @@ import ic_google from '../../../assets/images/ic_google.png';
 import ic_location from '../../../assets/images/ic_location.png';
 import ic_menu from '../../../assets/images/ic_menu.png';
 import playPause from '../../../assets/images/playPause.png';
+import callNow from '../../../assets/images/callNowIcon.png';
 
 export default {
   ic_menu,
@@ -57,5 +58,6 @@ export default {
   backArrowWhite,
   defaultUserImage,
   downArrow,
-  inputCheck
+  inputCheck,
+  callNow
 }

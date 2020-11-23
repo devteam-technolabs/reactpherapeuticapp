@@ -53,7 +53,7 @@ const Login = (props) => {
             } else {
               AsyncStorage.setItem('userData', JSON.stringify(data));
               dispatch(saveUser(data))
-              navigation.navigate('app');
+              navigation.navigate('app', { screen: 'Home' });
             }
           }
         })
