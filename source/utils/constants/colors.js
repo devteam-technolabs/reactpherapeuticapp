@@ -16,4 +16,5 @@ export default {
   activeDot: 'rgb(54,99,92)',
   questionText: 'rgb(22,22,22)',
   questionBackground: 'rgb(204,204,204)',
+  lightBlue:'#3fd8f2'
 }

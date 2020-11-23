@@ -458,7 +458,7 @@ const EditProfile = (props) => {
       closeOnTouchOutside={true}
       showConfirmButton={true}
       confirmText="Confirm"
-      confirmButtonColor={constants.colors.pink}
+      confirmButtonColor={constants.colors.lightBlue}
       onCancelPressed={() => {
         setShowAlert(false);
       }}
