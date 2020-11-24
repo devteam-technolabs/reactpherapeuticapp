@@ -1,0 +1,142 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.pherapeutic"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+9        android:targetSdkVersion="29" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml:5:22-75
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:4:5-67
+12-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:4:22-64
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->[com.facebook.flipper:flipper:0.54.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/c1067936e5e2f9bffa0611fce9370373/flipper-0.54.0/AndroidManifest.xml:16:5-76
+13-->[com.facebook.flipper:flipper:0.54.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/c1067936e5e2f9bffa0611fce9370373/flipper-0.54.0/AndroidManifest.xml:16:22-73
+14
+15    <queries>
+15-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-14:15
+16        <intent>
+16-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-13:18
+17            <action android:name="android.media.action.IMAGE_CAPTURE" />
+17-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-73
+17-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:21-70
+18        </intent>
+19    </queries>
+20
+21    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+21-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:5-81
+21-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:22-78
+22    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Include required permissions for Google Maps API to run. -->
+22-->[:react-native-maps] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-81
+22-->[:react-native-maps] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:22-78
+23    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+23-->[com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
+23-->[com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:23:22-76
+24
+25    <uses-feature
+25-->[com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+26        android:glEsVersion="0x00020000"
+26-->[com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+27        android:required="true" />
+27-->[com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+28
+29    <application
+29-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:6:5-25:19
+30        android:name="com.pherapeutic.MainApplication"
+30-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:7:7-38
+31        android:allowBackup="false"
+31-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:11:7-34
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.1.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/877ff2614da090610c4548c4a67f846d/core-1.1.0/AndroidManifest.xml:24:18-86
+33        android:debuggable="true"
+34        android:icon="@mipmap/ic_launcher"
+34-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:9:7-41
+35        android:label="@string/app_name"
+35-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:8:7-39
+36        android:roundIcon="@mipmap/ic_launcher_round"
+36-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:10:7-52
+37        android:theme="@style/AppTheme"
+37-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:12:7-38
+38        android:usesCleartextTraffic="true" >
+38-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/debug/AndroidManifest.xml:7:18-53
+39        <activity
+39-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:13:7-23:18
+40            android:name="com.pherapeutic.MainActivity"
+40-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:14:9-37
+41            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+41-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:16:9-86
+42            android:label="@string/app_name"
+42-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:15:9-41
+43            android:launchMode="singleTask"
+43-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:17:9-40
+44            android:windowSoftInputMode="adjustResize" >
+44-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:18:9-51
+45            <intent-filter>
+45-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:19:9-22:25
+46                <action android:name="android.intent.action.MAIN" />
+46-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:20:13-65
+46-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:20:21-62
+47
+48                <category android:name="android.intent.category.LAUNCHER" />
+48-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:21:13-73
+48-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:21:23-70
+49            </intent-filter>
+50        </activity>
+51        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+51-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:24:7-84
+51-->/Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/android/app/src/main/AndroidManifest.xml:24:17-81
+52
+53        <provider
+53-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:9-27:20
+54            android:name="androidx.core.content.FileProvider"
+54-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-62
+55            android:authorities="com.pherapeutic.provider"
+55-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-60
+56            android:exported="false"
+56-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-37
+57            android:grantUriPermissions="true" >
+57-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-47
+58            <meta-data
+58-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-26:58
+59                android:name="android.support.FILE_PROVIDER_PATHS"
+59-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
+60                android:resource="@xml/provider_paths" />
+60-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-55
+61        </provider>
+62
+63        <activity
+63-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:9-31:72
+64            android:name="com.yalantis.ucrop.UCropActivity"
+64-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:13-60
+65            android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- Needs to be explicitly declared on P+ -->
+65-->[:react-native-image-crop-picker] /Users/shubham/Desktop/Projects/Itechnolabs/reactpherapeuticapp/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:13-69
+66        <uses-library
+66-->[com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+67            android:name="org.apache.http.legacy"
+67-->[com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
+68            android:required="false" />
+68-->[com.google.android.gms:play-services-maps:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/56ff355782acbf7a8449a7c66ace0759/play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
+69
+70        <activity
+70-->[com.google.android.gms:play-services-base:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/de66cbed76ca7306c613af6f99282411/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+71            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+71-->[com.google.android.gms:play-services-base:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/de66cbed76ca7306c613af6f99282411/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+72            android:exported="false"
+72-->[com.google.android.gms:play-services-base:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/de66cbed76ca7306c613af6f99282411/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+73            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+73-->[com.google.android.gms:play-services-base:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/de66cbed76ca7306c613af6f99282411/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+74
+75        <meta-data
+75-->[com.google.android.gms:play-services-basement:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ec4c86f212ef174cd5c401835d645251/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+76            android:name="com.google.android.gms.version"
+76-->[com.google.android.gms:play-services-basement:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ec4c86f212ef174cd5c401835d645251/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+77            android:value="@integer/google_play_services_version" />
+77-->[com.google.android.gms:play-services-basement:17.0.0] /Users/shubham/.gradle/caches/transforms-2/files-2.1/ec4c86f212ef174cd5c401835d645251/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+78    </application>
+79
+80</manifest>

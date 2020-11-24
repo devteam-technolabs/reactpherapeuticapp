@@ -49,7 +49,7 @@ const Login = (props) => {
           if (message == 'User loggedin successfully') {
             Events.trigger('hideModalLoader');
             if (!data['is_email_verified']) {
-              setAlert("You can't login without verify emial.");
+              setAlert("You can't login without verify email.");
               setShowAlert(true)
             } else {
               AsyncStorage.setItem('userData', JSON.stringify(data));

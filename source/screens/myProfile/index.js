@@ -173,6 +173,19 @@ const MyProfile = (props) => {
           </View>
 
           <TouchableOpacity
+            onPress={() => navigation.navigate('MapScreen')}
+            style={styles.optionItem}
+          >
+            <View style={styles.optionNameView} >
+              <Image source={constants.images.faqs} resizeMode={'contain'} style={styles.optionImage} />
+              <Text style={styles.itemNameText} >Map </Text>
+            </View>
+            <View style={styles.nextArrowWrap} >
+              <Image source={constants.images.nextArrow} />
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity
             onPress={() => {
               console.log("logout!!!")
               setShowModal(prevState => !prevState)
@@ -187,7 +200,6 @@ const MyProfile = (props) => {
               <Image source={constants.images.nextArrow} />
             </View>
           </TouchableOpacity>
-
 
         </View>
       </View>

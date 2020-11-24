@@ -24,6 +24,8 @@ import QuestionBotScreen from '../screens/questionBot';
 import HomeScreen from '../screens/home';
 import ForgotPasswordScreen from '../screens/forgotPassword';
 
+import mapScreen from '../screens/mapScreen';
+import mapDetailScreen from '../screens/mapDetailScreen';
 
 const Stack = createStackNavigator();
 
@@ -52,6 +54,8 @@ const AppStack = () => {
       <Stack.Screen name="ViewProfile" component={ViewProfileScreen} />
       <Stack.Screen name="EditProfile" component={EditProfileScreen} />
       <Stack.Screen name="ChangePassword" component={ChangePasswordScreen} />
+      <Stack.Screen name="MapScreen" component={mapScreen} />
+      <Stack.Screen name="MapDetailScreen" component={mapDetailScreen} />
     </Stack.Navigator>
   )
 };
