@@ -69,7 +69,7 @@ export default StyleSheet.create({
         // backgroundColor:'red'
     },
     swipeTextProps: {
-        color: '#bf36a0',
+        color: '#18adbd',
         fontSize: 16,
         marginLeft: 10,
         width: 242,
@@ -108,12 +108,12 @@ export default StyleSheet.create({
     },
     textStylesOne: {
         textDecorationLine: 'underline',
-        color: '#46d0ee',
+        color: '#18adbd',
         fontSize: 16
     },
     textStylesTwo: {
         textDecorationLine: 'underline',
-        color: '#ee65cf',
+        color: '#18adbd',
         fontSize: 16
     },
     mapContainer: {

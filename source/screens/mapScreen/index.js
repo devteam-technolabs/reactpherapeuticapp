@@ -67,7 +67,7 @@ const MapScreen = (props) => {
 
 
                         <View style={styles.swipeAction}>
-                            <Image source={constants.images.downArrow} style={{}} />
+                            <Image source={constants.images.downArrow} />
                             <Text style={styles.swipeTextProps}>Swipe up for more information</Text>
                         </View>
 
@@ -81,18 +81,9 @@ const MapScreen = (props) => {
                             <View style={{ flex: 2, marginLeft: 10, justifyContent: "space-around", alignItems: 'flex-start' }}>
                                 <View style={styles.name}>
                                     <Text style={{ fontSize: 16 }}>DR. MARIE SMITH</Text>
-                                    <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: "center", backgroundColor: '#01d8fb', borderRadius: 5, height: 22, }}>
-                                        {/* <Text>4.5</Text>
-                                    <Rating
-                                        imageSize={14}
-                                        onFinishRating={this.ratingCompleted}
-                                        style={{ color: 'red' }}
-                                    /> */}
-                                    </View>
                                 </View>
-                                <Text style={{ fontSize: 14 }}>20 years experience {'\n'}
-                                12 consultations done
-                        </Text>
+                                <Text style={{ fontSize: 14 }}>20 years experience</Text>
+                                <Text>12 consultations done</Text>
                             </View>
                         </View>
                         <View style={styles.callButton}>

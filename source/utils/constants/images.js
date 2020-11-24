@@ -28,6 +28,7 @@ import ic_location from '../../../assets/images/ic_location.png';
 import ic_menu from '../../../assets/images/ic_menu.png';
 import playPause from '../../../assets/images/playPause.png';
 import callNow from '../../../assets/images/callNowIcon.png';
+import upArrow from '../../../assets/images/groupArrow.png';
 
 export default {
   ic_menu,
@@ -59,5 +60,6 @@ export default {
   defaultUserImage,
   downArrow,
   inputCheck,
-  callNow
+  callNow,
+  upArrow
 }
