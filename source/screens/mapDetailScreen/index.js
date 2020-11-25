@@ -63,8 +63,7 @@ const MapDetailScreen = (props) => {
 
 
                     <View style={styles.swipeAction}>
-                        <Image source={constants.images.downArrow} style={{}} />
-                        <Text style={styles.swipeTextProps}>Swipe up for more information</Text>
+                        <Image source={constants.images.upArrow} style={{}} />
                     </View>
 
 

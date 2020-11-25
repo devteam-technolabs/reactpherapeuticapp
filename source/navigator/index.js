@@ -23,9 +23,8 @@ import TherapistStatusScreen from '../screens/therapistStatus';
 import QuestionBotScreen from '../screens/questionBot';
 import HomeScreen from '../screens/home';
 import ForgotPasswordScreen from '../screens/forgotPassword';
-
-import mapScreen from '../screens/mapScreen';
-import mapDetailScreen from '../screens/mapDetailScreen';
+import ResetPasswordScreen from '../screens/resetPassword';
+import TherapistDetailsScreen from '../screens/therapistDetails';
 
 const Stack = createStackNavigator();
 
@@ -33,6 +32,7 @@ const AuthStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }} >
       <Stack.Screen name="AuthOptions" header={null} component={AuthOtionsScreen} />
+      <Stack.Screen name="ResetPassword" header={null} component={ResetPasswordScreen} />
       <Stack.Screen name="Login" header={null} component={LoginScreen} />
       <Stack.Screen name="GetStarted" component={GetStartedScreen} />
       <Stack.Screen name="Onboarding" component={OnboardingScreens} />
@@ -54,8 +54,7 @@ const AppStack = () => {
       <Stack.Screen name="ViewProfile" component={ViewProfileScreen} />
       <Stack.Screen name="EditProfile" component={EditProfileScreen} />
       <Stack.Screen name="ChangePassword" component={ChangePasswordScreen} />
-      <Stack.Screen name="MapScreen" component={mapScreen} />
-      <Stack.Screen name="MapDetailScreen" component={mapDetailScreen} />
+      <Stack.Screen name="TherapistDetails" component={TherapistDetailsScreen} />
     </Stack.Navigator>
   )
 };

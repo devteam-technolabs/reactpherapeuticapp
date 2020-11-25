@@ -102,7 +102,7 @@ const QuestionBot = (props) => {
           </View>
           <View style={{ flex: 1 }} >
             <TouchableOpacity
-              onPress={() => navigation.navigate('MyProfile')}
+              onPress={() => navigation.navigate('TherapistDetails')}
               style={{ justifyContent: 'center', alignItems: 'center' }}
             >
               <LinearGradient
@@ -141,7 +141,7 @@ const QuestionBot = (props) => {
         <View style={{ justifyContent: 'center', alignItems: 'center', marginBottom: height * 0.05, marginTop: height * 0.08 }} >
           <SubmitButton
             title={'CONTINUE'}
-            submitFunction={() => navigation.navigate('MyProfile')}
+            submitFunction={() => navigation.navigate('TherapistDetails')}
           />
         </View>
       </ScrollView>

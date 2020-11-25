@@ -99,11 +99,7 @@ const VerifyOTP = (props) => {
                 className='border-circle'
                 compareWithCode={null}
                 autoFocus={true}
-                // codeInputStyle={{ fontWeight: '800' }}
                 onFulfill={(code) => setOTP(code)}
-                // size={30}
-                // activeColor={'#BE37A1'}
-                // inactiveColor={'#4CCAEB'}
                 codeInputStyle={styles.codeInput}
               containerStyle={styles.codeInputContainer}
               />

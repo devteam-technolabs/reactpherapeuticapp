@@ -171,9 +171,12 @@ const Login = (props) => {
                 submitFunction={() => loginHandler()}
               />
             </View>
-            <View style={styles.forgotPasswordView} >
+            <TouchableOpacity
+            onPress={() => navigation.navigate('ForgotPassword')}
+             style={styles.forgotPasswordView} 
+             >
               <Text style={styles.forgotPasswordText} >Forgot Password?</Text>
-            </View>
+            </TouchableOpacity>
           </View>
         </View>
         <View style={styles.footerView} >

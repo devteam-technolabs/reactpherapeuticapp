@@ -19,6 +19,11 @@ export default StyleSheet.create({
     right: 0,
     zIndex: -2
   },
+  headingText: {
+    fontSize: 20,
+    color: constants.colors.black,
+    fontWeight: '500'
+  },
   formsBackground: {
     width,
     position: 'absolute',
@@ -32,7 +37,8 @@ export default StyleSheet.create({
     paddingHorizontal: width * 0.05,
     width,
     justifyContent: 'center',
-    alignItems: 'flex-start'
+    alignItems: 'center',
+    flexDirection: 'row'
   },
   logoView: {
     flex: 1.8,
@@ -92,7 +98,7 @@ export default StyleSheet.create({
   },
   fieldInput: {
     height: height * 0.049,
-    width: width * 0.7,
+    width: width * 0.8,
     fontSize: 14,
     fontWeight: '500',
     paddingLeft: 10,
@@ -108,17 +114,34 @@ export default StyleSheet.create({
     alignItems: 'center',
     // borderRadius: 6
   },
+  codeInput:{
+    height: height * 0.05,
+    width: width * 0.12,
+    borderRadius: 4,
+    borderWidth: 0,
+    backgroundColor: '#ffffff',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: '#000000',
+    fontSize: 14
+  },
+  codeInputContainer:{
+    height: height * 0.051,
+    width: width * 0.8,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: height * 0.025
+  },
   rememberMeView: {
     width: width * 0.84,
     justifyContent: 'center',
     alignItems: 'center'
   },
   forgotPasswordView: {
-    // width: width * 0.84,
+    width: width * 0.84,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: height * 0.01,
-    paddingHorizontal: width * 0.1,
+    paddingVertical: height * 0.01
   },
   forgotPasswordText: {
     fontSize: 13,

@@ -51,25 +51,16 @@ export default StyleSheet.create({
     },
     mapView: {
         flex: 12,
-        height: 356,
-        borderTopLeftRadius: 10,
-        borderTopRightRadius: 10,
-        // borderTop
-        // width:width*0.8,
         paddingHorizontal: 20,
-        // top: 20,
-        // backgroundColor: constants.colors.white,
-        // flex:3
     },
     swipeAction: {
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center'
-        // backgroundColor:'red'
     },
     swipeTextProps: {
-        color: '#bf36a0',
+        color: '#18adbd',
         fontSize: 18,
         marginLeft: 10,
         width: 242,
@@ -94,7 +85,7 @@ export default StyleSheet.create({
         fontWeight: "normal",
         fontStyle: "normal",
         lineHeight: 22,
-        color: "#01d8fb"
+        color: "#18adbd"
     },
 
     callButton: {
@@ -108,12 +99,12 @@ export default StyleSheet.create({
     },
     textStylesOne: {
         textDecorationLine: 'underline',
-        color: '#46d0ee',
+        color: '#18adbd',
         fontSize: 16
     },
     textStylesTwo: {
         textDecorationLine: 'underline',
-        color: '#ee65cf',
+        color: '#18adbd',
         fontSize: 16
     },
     mapContainer: {

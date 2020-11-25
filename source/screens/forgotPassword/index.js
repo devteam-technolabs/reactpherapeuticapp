@@ -22,21 +22,22 @@ import { validateEmail } from '../../utils/validateStrings';
 
 const { height, width } = Dimensions.get('window');
 
-const Login = (props) => {
+const ForgotPassword = (props) => {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
   const [showAlert, setShowAlert] = useState(false);
-  const [alertMessage, setAlert] = useState('Please Fill email and password.');
+  const [alertMessage, setAlert] = useState('Please Enter your email.');
   const [passwordTick, setPasswordTick] = useState(false);
   const [emailTick, setEmailTick] = useState(false);
+  const [userId, setUserId] = useState(null);
 
   const { navigation, dispatch } = props;
 
   const sendOtp = () => {
     if (email && !emailError) {
       Events.trigger('showModalLoader');
-      const endpoint = 'user/forgotPassword';
+      const endpoint = 'forgotPassword';
       const method = 'POST';
       const body = { email };
 
@@ -46,8 +47,9 @@ const Login = (props) => {
           const { data, message, status, statusCode } = response['data'];
           if (status == 'success') {
             Events.trigger('hideModalLoader');
-              setAlert("Please Verify OTP");
-              setShowAlert(true)
+            setAlert("Please Verify OTP");
+            setShowAlert(true)
+            setUserId(data['user_id'])
           }
         })
         .catch(error => {
@@ -57,11 +59,11 @@ const Login = (props) => {
           setAlert(message);
           setShowAlert(true)
         })
-    } else if (email && emailError && password) {
+    } else if (email && emailError) {
       setAlert('Email is not valid.')
       setShowAlert(true);
-    } else if (!email || !password) {
-      setAlert('Please Fill email and password.')
+    } else if (!email) {
+      setAlert('Please enter your Email.')
       setShowAlert(true);
     }
   }
@@ -149,12 +151,21 @@ const Login = (props) => {
           confirmButtonColor={constants.colors.lightGreen}
           onCancelPressed={() => {
             setShowAlert(false);
+            if (userId) {
+              navigation.navigate('ResetPassword', { user_id: userId })
+            }
           }}
           onConfirmPressed={() => {
             setShowAlert(false);
+            if (userId) {
+              navigation.navigate('ResetPassword', { user_id: userId })
+            }
           }}
           onDismiss={() => {
             setShowAlert(false);
+            if (userId) {
+              navigation.navigate('ResetPassword', { user_id: userId })
+            }
           }}
         />
       </View>
@@ -163,4 +174,4 @@ const Login = (props) => {
 };
 
 
-export default connect()(Login);
+export default connect()(ForgotPassword);

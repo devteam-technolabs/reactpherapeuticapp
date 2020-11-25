@@ -15,7 +15,7 @@ import APICaller from '../../utils/APICaller';
 import { saveUserProfile } from '../../redux/actions/user';
 import AwesomeAlert from 'react-native-awesome-alerts';
 
-const mapStyle = [
+export const mapStyle = [
   {
     elementType: 'geometry',
     stylers: [

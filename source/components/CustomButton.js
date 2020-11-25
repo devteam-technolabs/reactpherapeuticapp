@@ -37,7 +37,7 @@ const CustomButton = (props) => {
       <LinearGradient
         start={{ x: 0, y: 1 }}
         end={{ x: 1, y: 1 }}
-        colors={empty ? ['transparent', 'transparent'] : ["#bf36a0", "#bf36a0","#3fd8f2"]}
+        colors={empty ? ['transparent', 'transparent'] : ["#228994", "#3BD8E5"]}
         style={{
           justifyContent: 'center',
           alignItems: 'center',
