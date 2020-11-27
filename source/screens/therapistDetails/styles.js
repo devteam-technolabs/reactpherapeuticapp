@@ -143,7 +143,7 @@ export default StyleSheet.create({
     width: width * 0.9,
     paddingHorizontal: width * 0.05,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center'
   },
   therapistInfo: {

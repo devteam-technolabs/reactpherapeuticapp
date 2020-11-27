@@ -84,13 +84,16 @@ const QuestionBot = (props) => {
       <Image source={constants.images.background} resizeMode={'stretch'} style={styles.containerBackground} />
       <ScrollView
         ref={scrollRef}
-        // onContentSizeChange={() => scrollRef.scrollTo({x: 0, y: 0, animated: true})}
+        onContentSizeChange={() => {
+          // scrollRef.current.scrollTo({ x: 0, y: 0, animated: true })
+          scrollRef.current.scrollToEnd()
+        }}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.container}
       >
         <View style={styles.backButtonView} >
           <TouchableOpacity
-            // onPress={() => navigation.goBack()}
+            onPress={() => navigation.navigate('MyProfile')}
             style={styles.backButtonWrap}
           >
             <Image source={constants.images.backArrowWhite} style={{ height: 18, width: 10, margin: 10 }} />
@@ -138,12 +141,18 @@ const QuestionBot = (props) => {
             :
             <View />
         }
-        <View style={{ justifyContent: 'center', alignItems: 'center', marginBottom: height * 0.05, marginTop: height * 0.08 }} >
-          <SubmitButton
-            title={'CONTINUE'}
-            submitFunction={() => navigation.navigate('TherapistDetails')}
-          />
-        </View>
+        {
+          questionsList.length === noOfAnswers
+            ?
+            <View style={{ justifyContent: 'center', alignItems: 'center', marginBottom: height * 0.05, marginTop: height * 0.08 }} >
+              <SubmitButton
+                title={'CONTINUE'}
+                submitFunction={() => navigation.navigate('TherapistDetails')}
+              />
+            </View>
+            :
+            <View />
+        }
       </ScrollView>
 
       <AwesomeAlert

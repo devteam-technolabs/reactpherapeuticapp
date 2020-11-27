@@ -22,7 +22,7 @@ const TherapistDetails = (props) => {
   const { userToken, navigation } = props;
 
   useEffect(() => {
-    // if (!therapist)
+    if (!therapist.image)
       getTherapistsList()
   }, [therapist]);
 
@@ -32,23 +32,95 @@ const TherapistDetails = (props) => {
     const method = 'POST';
     const headers = {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${userToken}`,
+      "Authorization": `Bearer 95|v9E6DVpD9ttwTgQxfBME1u0KZ6lYzv5LfjWwinaq`,
       "Accept": "application/json"
     };
     let body = new FormData();
-    body.append('latitude', '30.7333');
-    body.append('longitude', '76.7794');
+    body.append('latitude', '30.7046');
+    body.append('longitude', '76.7179');
     APICaller(endpoint, method, body, headers)
       .then(response => {
-        console.log('response getting therapist list => ', response['data']);
+        console.log('response getting therapist list => ', response);
         const { status, statusCode, message, data } = response['data'];
-        if (message == "Therapist List.") {
-          setTherapistsList([...data]);
-          setTherapist(data[0])
-        }
+        setTherapistsList([
+          {
+            image: "https://firebasestorage.googleapis.com/v0/b/ihad2lie.appspot.com/o/profileImages%2F1603133558?alt=media&token=261fe67f-bf96-461f-8efc-b15c44abe9a5",
+            first_name: "Avan",
+            last_name: "saam",
+            experience: 3,
+            qualification: "MBBS",
+            language: "English",
+            specialism: 'andf',
+          },
+          {
+            image: "https://firebasestorage.googleapis.com/v0/b/ihad2lie.appspot.com/o/profileImages%2F288C4549F0B6.jpg?alt=media&token=76a97901-f328-4a04-aa76-58f4d9e243cb",
+            first_name: "Akin",
+            last_name: "see",
+            experience: 12,
+            qualification: "graduation",
+            language: "French",
+            specialism: 'Depression',
+          },
+          {
+            image: "https://firebasestorage.googleapis.com/v0/b/ihad2lie.appspot.com/o/profileImages%2F1603763121?alt=media&token=762e32c9-64ca-44fa-8bb3-1c2604ed4222",
+            first_name: "Akin",
+            last_name: "see",
+            experience: 12,
+            qualification: "graduation",
+            language: "English",
+            specialism: 'Depression, Anger',
+          }
+        ]);
+        setTherapist({
+          image: "https://firebasestorage.googleapis.com/v0/b/ihad2lie.appspot.com/o/profileImages%2F1603133558?alt=media&token=261fe67f-bf96-461f-8efc-b15c44abe9a5",
+          first_name: "Avan",
+          last_name: "saam",
+          experience: 3,
+          qualification: "MBBS",
+          language: "English",
+          specialism: 'sjhfgh',
+        })
       })
       .catch(error => {
         console.log("response getting therapist list => ", error['data'])
+        setTherapistsList([
+          {
+            image: "https://firebasestorage.googleapis.com/v0/b/ihad2lie.appspot.com/o/profileImages%2F1603133558?alt=media&token=261fe67f-bf96-461f-8efc-b15c44abe9a5",
+            first_name: "Avan",
+            last_name: "saam",
+            experience: 3,
+            qualification: "MBBS",
+            language: "English",
+            specialism: 'andf',
+          },
+          {
+            image: "https://firebasestorage.googleapis.com/v0/b/ihad2lie.appspot.com/o/profileImages%2F288C4549F0B6.jpg?alt=media&token=76a97901-f328-4a04-aa76-58f4d9e243cb",
+            first_name: "Akin",
+            last_name: "see",
+            experience: 12,
+            qualification: "graduation",
+            language: "French",
+            specialism: 'Depression',
+          },
+          {
+            image: "https://firebasestorage.googleapis.com/v0/b/ihad2lie.appspot.com/o/profileImages%2F1603763121?alt=media&token=762e32c9-64ca-44fa-8bb3-1c2604ed4222",
+            first_name: "Akin",
+            last_name: "see",
+            experience: 12,
+            qualification: "graduation",
+            language: "English",
+            specialism: 'Depression, Anger',
+          }
+        ]);
+        setTherapist({
+          image: "https://firebasestorage.googleapis.com/v0/b/ihad2lie.appspot.com/o/profileImages%2F1603133558?alt=media&token=261fe67f-bf96-461f-8efc-b15c44abe9a5",
+          first_name: "Avan",
+          last_name: "saam",
+          experience: 3,
+          qualification: "MBBS",
+          language: "English",
+          specialism: 'sjhfgh',
+        })
       })
   }
 
@@ -124,11 +196,11 @@ const TherapistDetails = (props) => {
             </View>
             <View style={styles.infoDetails}>
               <Text style={styles.infoHeading}>Languages:  </Text>
-              <Text style={styles.infoDesc}>English, Italian, Spanish </Text>
+              <Text style={styles.infoDesc}>{therapist['language']}</Text>
             </View>
             <View style={styles.infoDetails}>
               <Text style={styles.infoHeading}>Specialism:  </Text>
-              <Text style={styles.infoDesc}>Psychotherapy, Cognitive</Text>
+              <Text style={styles.infoDesc}>{therapist['specialism']}</Text>
             </View>
           </View>
           <CustomButton
@@ -137,15 +209,25 @@ const TherapistDetails = (props) => {
           />
           <View style={styles.misc}>
             <TouchableOpacity
-            onPress={() => { 
-              setTherapist(therapistsList[therapistNumber + 1]);
-              setTherapistNumber(prevNo => ++prevNo)
-             } }
-             style={{justifyContent: 'center', alignItems: 'center'}} 
-             >
+              onPress={() => {
+                console.log("[[>>> ", therapistsList.length)
+                console.log("[[>>> ", therapistNumber)
+                if (therapistNumber < therapistsList.length - 1) {
+
+                  setTherapist(therapistsList[therapistNumber + 1]);
+                  setTherapistNumber(prevNo => ++prevNo)
+                }
+              }}
+              style={{ justifyContent: 'center', alignItems: 'center' }}
+            >
               <Text style={styles.textStylesOne}>Search Again</Text>
             </TouchableOpacity>
-            <Text style={styles.textStylesTwo}>Cancel</Text>
+            <TouchableOpacity
+              onPress={() => navigation.goBack()}
+              style={{ justifyContent: 'center', alignItems: 'center' }}
+            >
+              <Text style={styles.textStylesTwo}>Cancel</Text>
+            </TouchableOpacity>
           </View>
         </View>
 

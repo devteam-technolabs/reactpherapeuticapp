@@ -47,9 +47,9 @@ const AuthStack = () => {
 const AppStack = () => {
   return (
     <Stack.Navigator initialRouteName={'Home'} screenOptions={{ headerShown: false }} >
+    <Stack.Screen name="MyProfile" component={MyProfileScreen} />
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="QuestionBot" component={QuestionBotScreen} />
-      <Stack.Screen name="MyProfile" component={MyProfileScreen} />
       <Stack.Screen name="TherapistStatus" component={TherapistStatusScreen} />
       <Stack.Screen name="ViewProfile" component={ViewProfileScreen} />
       <Stack.Screen name="EditProfile" component={EditProfileScreen} />
