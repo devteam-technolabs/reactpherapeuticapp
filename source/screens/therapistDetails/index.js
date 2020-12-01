@@ -8,6 +8,7 @@ import styles from './styles.js';
 import { connect } from 'react-redux';
 import APICaller from '../../utils/APICaller';
 import { mapStyle } from '../therapistStatus';
+import { Marker } from 'react-native-maps';
 
 const TherapistDetails = (props) => {
   const [therapistsList, setTherapistsList] = useState([]);
@@ -23,10 +24,10 @@ const TherapistDetails = (props) => {
 
   useEffect(() => {
     // if (!therapist)
-      getTherapistsList()
+    getTherapistsList()
   }, [therapist]);
 
-  console.log("therapist data ===> ", therapist)
+  // console.log("therapist data ===> ", therapist)
   const getTherapistsList = () => {
     const endpoint = 'user/search/therapist';
     const method = 'POST';
@@ -40,7 +41,7 @@ const TherapistDetails = (props) => {
     body.append('longitude', '76.7794');
     APICaller(endpoint, method, body, headers)
       .then(response => {
-        console.log('response getting therapist list => ', response['data']);
+        console.log('response getting therapist list => ', response['data'], '------');
         const { status, statusCode, message, data } = response['data'];
         if (message == "Therapist List.") {
           setTherapistsList([...data]);
@@ -48,7 +49,7 @@ const TherapistDetails = (props) => {
         }
       })
       .catch(error => {
-        console.log("response getting therapist list => ", error['data'])
+        console.log("response getting therapist listtt => ", error['data'])
       })
   }
 
@@ -59,7 +60,7 @@ const TherapistDetails = (props) => {
       {/* Header */}
       <View style={styles.header}>
         <View style={{ flex: 2, justifyContent: 'flex-start' }}>
-          <TouchableOpacity  >
+          <TouchableOpacity onPress={() => navigation.navigate('MyProfile')} >
             <Image source={constants.images.ic_menu} style={{ height: 18, width: 18, margin: 10 }} />
           </TouchableOpacity>
         </View>
@@ -90,21 +91,30 @@ const TherapistDetails = (props) => {
             region={{
               latitude: 37.78825,
               longitude: -122.4324,
-              latitudeDelta: 0.015,
+              latitudeDelta: 0,
               longitudeDelta: 0.0121,
             }}
-          />
+
+          >
+            <Marker
+              coordinate={{
+                latitude: 37.78825,
+                longitude: -122.4324
+              }}
+            />
+          </MapView>
+
         </View>
         <View style={styles.detailsView} >
 
           <View style={styles.therapistInfo}>
             <View style={styles.imageWrap}>
               <Image
-                source={therapist['image'] ? { uri: therapist['image'] } : constants.images.defaultUserImage}
+                source={therapist && therapist['image'] !== null ? { uri: therapist['image'] } : constants.images.defaultUserImage}
                 style={styles.userImage} />
             </View>
 
-            <View style={styles.therapistDetails}>
+            {/* <View style={styles.therapistDetails}>
               <View style={styles.name}>
                 <Text style={{ fontSize: 16 }}>{`Dr. ${therapist['first_name']} ${therapist['last_name']}`}</Text>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: "center", backgroundColor: '#01d8fb', borderRadius: 5, height: 22, }}>
@@ -112,7 +122,7 @@ const TherapistDetails = (props) => {
               </View>
               <Text style={{ fontSize: 14 }}>{`${therapist['experience']} years experience`}</Text>
               <Text style={{ fontSize: 14 }}>{`${therapist['experience']} consultations done`}</Text>
-            </View>
+            </View> */}
           </View>
           <View style={styles.costView} >
             <Text style={styles.costText} >Cost 50$</Text>
@@ -120,7 +130,7 @@ const TherapistDetails = (props) => {
           <View style={styles.info}>
             <View style={styles.infoDetails}>
               <Text style={styles.infoHeading}>Qualification:  </Text>
-              <Text style={styles.infoDesc}>{therapist['qualification']}</Text>
+              {/* <Text style={styles.infoDesc}>{therapist['qualification']}</Text> */}
             </View>
             <View style={styles.infoDetails}>
               <Text style={styles.infoHeading}>Languages:  </Text>
@@ -137,12 +147,12 @@ const TherapistDetails = (props) => {
           />
           <View style={styles.misc}>
             <TouchableOpacity
-            onPress={() => { 
-              setTherapist(therapistsList[therapistNumber + 1]);
-              setTherapistNumber(prevNo => ++prevNo)
-             } }
-             style={{justifyContent: 'center', alignItems: 'center'}} 
-             >
+              onPress={() => {
+                setTherapist(therapistsList[therapistNumber + 1]);
+                setTherapistNumber(prevNo => ++prevNo)
+              }}
+              style={{ justifyContent: 'center', alignItems: 'center' }}
+            >
               <Text style={styles.textStylesOne}>Search Again</Text>
             </TouchableOpacity>
             <Text style={styles.textStylesTwo}>Cancel</Text>

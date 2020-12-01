@@ -10,7 +10,6 @@ const Home = (props) => {
     return <TherapistStatus navigation={navigation} />
   else
     return <QuestionBot navigation={navigation}  />
-
 }
 
 const mapStateToProps = (state) => ({
