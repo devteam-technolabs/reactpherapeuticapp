@@ -77,6 +77,6 @@ export default StyleSheet.create({
     alignItems: 'center',
     borderRadius: 5,
     marginTop: height * 0.02,
-    backgroundColor: constants.colors.darkGreen
+    // backgroundColor: constants.colors.darkGreen
   }
 })

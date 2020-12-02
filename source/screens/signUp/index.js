@@ -14,6 +14,7 @@ import styles from './styles';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { validateEmail } from '../../utils/validateStrings';
 import AwesomeAlert from 'react-native-awesome-alerts';
+import Geolocation from '@react-native-community/geolocation';
 import constants from '../../utils/constants';
 import Events from '../../utils/events';
 import APICaller from '../../utils/APICaller';
@@ -38,6 +39,7 @@ const SignUp = (props) => {
   const [speciality_id, setSpeciality_id] = useState('');
   const [years, setYears] = useState('');
   const [languages, storeLanguages] = useState([]);
+  const [location, storeLocation] = useState([]);
   const [specialities, storeSpecialities] = useState([]);
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlert] = useState('Please Fill All Fields');
@@ -64,6 +66,11 @@ const SignUp = (props) => {
       })
   }
 
+  const getCurrentCoordinates = async () => {
+    await Geolocation.getCurrentPosition(info => storeLocation(info));
+    console.log('location is', location);
+  };
+
   const getSpecialities = () => {
     APICaller('getTherapistTypes', 'GET')
       .then(response => {
@@ -78,7 +85,7 @@ const SignUp = (props) => {
       })
   }
 
-  const registerUser = () => {
+  const registerUser = async () => {
     Events.trigger("showModalLoader")
     const registerObj = {
       first_name,
@@ -96,10 +103,10 @@ const SignUp = (props) => {
       fcm_token: "poiytr4677y7ttgtttg",
       qualification: "5",
       address: "ABC place",
-      latitude: "56",
-      longitude: "555"
-
+      latitude: location.coords.latitude,
+      longitude: location.coords.longitude,
     }
+
     console.log('register object => ', registerObj)
     APICaller('register', 'POST', registerObj)
       .then(response => {
@@ -262,14 +269,17 @@ const SignUp = (props) => {
   )
 
   return (
-    <KeyboardAwareScrollView
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={{ width: '100%', flex: 1 }}
-      keyboardVerticalOffset={'60'}
-      behavior={'padding'}
-    >
+    // <KeyboardAwareScrollView
+    //   showsVerticalScrollIndicator={false}
+    //   contentContainerStyle={{ width: '100%', flex: 1 }}
+    //   keyboardVerticalOffset={'60'}
+    //   behavior={'padding'}
+    // >
+    <View style={{ flex: 1 }}>
+      <Image source={constants.images.background} resizeMode={'stretch'} style={styles.containerBackground} />
+
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.container} >
-        <Image source={constants.images.background} resizeMode={'stretch'} style={styles.containerBackground} />
+
         <Image source={constants.images.formsBackground} resizeMode={'stretch'} style={styles.formsBackground} />
         <View style={styles.backButtonView} >
           <TouchableOpacity
@@ -301,6 +311,7 @@ const SignUp = (props) => {
                   value={first_name}
                   autoCompleteType={'off'}
                   autoCorrect={false}
+                  onFocus={() => getCurrentCoordinates()}
                 />
               </View>
             </View>
@@ -349,14 +360,20 @@ const SignUp = (props) => {
             <View style={styles.formField} >
               <Text style={styles.fieldName} >CONFIRM PASSWORD</Text>
               <View style={styles.fieldInputWrap} >
-                <TextInput
+                {/* <TextInput
                   style={styles.fieldInput}
                   secureTextEntry={true}
                   onChangeText={text => setConfirmPassword(text)}
                   value={confirm_password}
                   autoCompleteType={'off'}
                   autoCorrect={false}
-                />
+                /> */}
+                <TextInput
+                  style={styles.fieldInput}
+                  secureTextEntry={true}
+                  onChangeText={text => setConfirmPassword(text)}
+                  value={confirm_password}
+                ></TextInput>
               </View>
             </View>
 
@@ -501,8 +518,8 @@ const SignUp = (props) => {
           setShowAlert(false);
         }}
       />
-
-    </KeyboardAwareScrollView>
+    </View>
+    // </KeyboardAwareScrollView>
   )
 };
 

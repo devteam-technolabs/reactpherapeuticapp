@@ -14,6 +14,8 @@ import constants from '../../utils/constants';
 import APICaller from '../../utils/APICaller';
 import { saveUserProfile } from '../../redux/actions/user';
 import AwesomeAlert from 'react-native-awesome-alerts';
+import LinearGradient from 'react-native-linear-gradient';
+
 
 export const mapStyle = [
   {
@@ -177,7 +179,7 @@ export const mapStyle = [
 ];
 
 const TherapistStatus = (props) => {
-  const[showAlert,setShowAlert] = useState(false)
+  const [showAlert, setShowAlert] = useState(false)
 
   const { userToken, userData, navigation, dispatch } = props;
   const { online_status } = userData;
@@ -214,13 +216,13 @@ const TherapistStatus = (props) => {
       <Image source={constants.images.background} resizeMode={'stretch'} style={styles.containerBackground} />
       <View style={styles.headerView} >
         <TouchableOpacity
-          // onPress={() => navigation.goBack()}
+          onPress={() => navigation.navigate('MyProfile')}
           style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }}
         >
           <Image source={constants.images.ic_menu} style={{ height: 14.1, width: 18.3, margin: 10 }} />
         </TouchableOpacity>
         <View style={{ flex: 5, justifyContent: 'center', alignItems: 'center' }} >
-          <Text style={styles.headingText} >Reaching out</Text>
+          <Text style={styles.headingText} >Finding Clients</Text>
         </View>
         <View style={{ flex: 1 }} />
       </View>
@@ -246,18 +248,34 @@ const TherapistStatus = (props) => {
         </View>
         <TouchableOpacity
           onPress={() => changeOnlineStatus()}
-          style={styles.bottonView} >
-          {
-            online_status == 1
-              ?
-              <Text style={styles.buttonText} >YOU'RE ONLINE NOW</Text>
-              :
-              <View style={{ justifyContent: 'center', alignItems: 'center' }} >
-                <Text style={styles.buttonTextSmall} >You're offline. Go online to</Text>
-                <Text style={styles.buttonTextSmall} >find new clients</Text>
-              </View>
-          }
+          style={styles.bottonView}
+        >
+          <LinearGradient
+            start={{ x: 0, y: 1 }}
+            end={{ x: 1, y: 1 }}
+            colors={["#228994", "#3BD8E5"]}
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              height: Dimensions.get('window').height * 0.060,
+              width: Dimensions.get('window').width * 0.80,
+              borderRadius: 3,
+            }}
+          >
+            {
+              online_status == 1
+                ?
+                <Text style={styles.buttonText} >YOU'RE ONLINE NOW</Text>
+                :
+                <View style={{ justifyContent: 'center', alignItems: 'center' }} >
+                  <Text style={styles.buttonTextSmall} >You're offline. Go online to</Text>
+                  <Text style={styles.buttonTextSmall} >find new clients</Text>
+                </View>
+            }
+          </LinearGradient>
+
         </TouchableOpacity>
+
       </View>
       <View style={styles.headerView} />
       <AwesomeAlert

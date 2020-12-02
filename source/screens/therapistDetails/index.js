@@ -8,6 +8,7 @@ import styles from './styles.js';
 import { connect } from 'react-redux';
 import APICaller from '../../utils/APICaller';
 import { mapStyle } from '../therapistStatus';
+import { Marker } from 'react-native-maps';
 
 const TherapistDetails = (props) => {
   const [therapistsList, setTherapistsList] = useState([]);
@@ -22,105 +23,35 @@ const TherapistDetails = (props) => {
   const { userToken, navigation } = props;
 
   useEffect(() => {
+    // if (!therapist)
+//    getTherapistsList()
     if (!therapist.image)
       getTherapistsList()
   }, [therapist]);
 
-  console.log("therapist data ===> ", therapist)
+  // console.log("therapist data ===> ", therapist)
   const getTherapistsList = () => {
     const endpoint = 'user/search/therapist';
     const method = 'POST';
     const headers = {
       "Content-Type": "application/json",
-      "Authorization": `Bearer 95|v9E6DVpD9ttwTgQxfBME1u0KZ6lYzv5LfjWwinaq`,
+      "Authorization": `Bearer ${userToken}`,
       "Accept": "application/json"
     };
     let body = new FormData();
-    body.append('latitude', '30.7046');
-    body.append('longitude', '76.7179');
+    body.append('latitude', '30.7333');
+    body.append('longitude', '76.7794');
     APICaller(endpoint, method, body, headers)
       .then(response => {
-        console.log('response getting therapist list => ', response);
+        console.log('response getting therapist list => ', response['data'], '------');
         const { status, statusCode, message, data } = response['data'];
-        setTherapistsList([
-          {
-            image: "https://firebasestorage.googleapis.com/v0/b/ihad2lie.appspot.com/o/profileImages%2F1603133558?alt=media&token=261fe67f-bf96-461f-8efc-b15c44abe9a5",
-            first_name: "Avan",
-            last_name: "saam",
-            experience: 3,
-            qualification: "MBBS",
-            language: "English",
-            specialism: 'andf',
-          },
-          {
-            image: "https://firebasestorage.googleapis.com/v0/b/ihad2lie.appspot.com/o/profileImages%2F288C4549F0B6.jpg?alt=media&token=76a97901-f328-4a04-aa76-58f4d9e243cb",
-            first_name: "Akin",
-            last_name: "see",
-            experience: 12,
-            qualification: "graduation",
-            language: "French",
-            specialism: 'Depression',
-          },
-          {
-            image: "https://firebasestorage.googleapis.com/v0/b/ihad2lie.appspot.com/o/profileImages%2F1603763121?alt=media&token=762e32c9-64ca-44fa-8bb3-1c2604ed4222",
-            first_name: "Akin",
-            last_name: "see",
-            experience: 12,
-            qualification: "graduation",
-            language: "English",
-            specialism: 'Depression, Anger',
-          }
-        ]);
-        setTherapist({
-          image: "https://firebasestorage.googleapis.com/v0/b/ihad2lie.appspot.com/o/profileImages%2F1603133558?alt=media&token=261fe67f-bf96-461f-8efc-b15c44abe9a5",
-          first_name: "Avan",
-          last_name: "saam",
-          experience: 3,
-          qualification: "MBBS",
-          language: "English",
-          specialism: 'sjhfgh',
-        })
+        if (message == "Therapist List.") {
+          setTherapistsList([...data]);
+          setTherapist(data[0])
+        }
       })
       .catch(error => {
-        console.log("response getting therapist list => ", error['data'])
-        setTherapistsList([
-          {
-            image: "https://firebasestorage.googleapis.com/v0/b/ihad2lie.appspot.com/o/profileImages%2F1603133558?alt=media&token=261fe67f-bf96-461f-8efc-b15c44abe9a5",
-            first_name: "Avan",
-            last_name: "saam",
-            experience: 3,
-            qualification: "MBBS",
-            language: "English",
-            specialism: 'andf',
-          },
-          {
-            image: "https://firebasestorage.googleapis.com/v0/b/ihad2lie.appspot.com/o/profileImages%2F288C4549F0B6.jpg?alt=media&token=76a97901-f328-4a04-aa76-58f4d9e243cb",
-            first_name: "Akin",
-            last_name: "see",
-            experience: 12,
-            qualification: "graduation",
-            language: "French",
-            specialism: 'Depression',
-          },
-          {
-            image: "https://firebasestorage.googleapis.com/v0/b/ihad2lie.appspot.com/o/profileImages%2F1603763121?alt=media&token=762e32c9-64ca-44fa-8bb3-1c2604ed4222",
-            first_name: "Akin",
-            last_name: "see",
-            experience: 12,
-            qualification: "graduation",
-            language: "English",
-            specialism: 'Depression, Anger',
-          }
-        ]);
-        setTherapist({
-          image: "https://firebasestorage.googleapis.com/v0/b/ihad2lie.appspot.com/o/profileImages%2F1603133558?alt=media&token=261fe67f-bf96-461f-8efc-b15c44abe9a5",
-          first_name: "Avan",
-          last_name: "saam",
-          experience: 3,
-          qualification: "MBBS",
-          language: "English",
-          specialism: 'sjhfgh',
-        })
+        console.log("response getting therapist listtt => ", error['data'])
       })
   }
 
@@ -131,7 +62,7 @@ const TherapistDetails = (props) => {
       {/* Header */}
       <View style={styles.header}>
         <View style={{ flex: 2, justifyContent: 'flex-start' }}>
-          <TouchableOpacity  >
+          <TouchableOpacity onPress={() => navigation.navigate('MyProfile')} >
             <Image source={constants.images.ic_menu} style={{ height: 18, width: 18, margin: 10 }} />
           </TouchableOpacity>
         </View>
@@ -162,21 +93,30 @@ const TherapistDetails = (props) => {
             region={{
               latitude: 37.78825,
               longitude: -122.4324,
-              latitudeDelta: 0.015,
+              latitudeDelta: 0,
               longitudeDelta: 0.0121,
             }}
-          />
+
+          >
+            <Marker
+              coordinate={{
+                latitude: 37.78825,
+                longitude: -122.4324
+              }}
+            />
+          </MapView>
+
         </View>
         <View style={styles.detailsView} >
 
           <View style={styles.therapistInfo}>
             <View style={styles.imageWrap}>
               <Image
-                source={therapist['image'] ? { uri: therapist['image'] } : constants.images.defaultUserImage}
+                source={therapist && therapist['image'] !== null ? { uri: therapist['image'] } : constants.images.defaultUserImage}
                 style={styles.userImage} />
             </View>
 
-            <View style={styles.therapistDetails}>
+            {/* <View style={styles.therapistDetails}>
               <View style={styles.name}>
                 <Text style={{ fontSize: 16 }}>{`Dr. ${therapist['first_name']} ${therapist['last_name']}`}</Text>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: "center", backgroundColor: '#01d8fb', borderRadius: 5, height: 22, }}>
@@ -184,7 +124,7 @@ const TherapistDetails = (props) => {
               </View>
               <Text style={{ fontSize: 14 }}>{`${therapist['experience']} years experience`}</Text>
               <Text style={{ fontSize: 14 }}>{`${therapist['experience']} consultations done`}</Text>
-            </View>
+            </View> */}
           </View>
           <View style={styles.costView} >
             <Text style={styles.costText} >Cost 50$</Text>
@@ -192,7 +132,7 @@ const TherapistDetails = (props) => {
           <View style={styles.info}>
             <View style={styles.infoDetails}>
               <Text style={styles.infoHeading}>Qualification:  </Text>
-              <Text style={styles.infoDesc}>{therapist['qualification']}</Text>
+              {/* <Text style={styles.infoDesc}>{therapist['qualification']}</Text> */}
             </View>
             <View style={styles.infoDetails}>
               <Text style={styles.infoHeading}>Languages:  </Text>
