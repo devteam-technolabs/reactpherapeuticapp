@@ -18,6 +18,7 @@ import { connect } from 'react-redux';
 import { saveUser } from '../../redux/actions/user';
 import AwesomeAlert from 'react-native-awesome-alerts';
 import { validateEmail } from '../../utils/validateStrings';
+import { LoginManager } from "react-native-fbsdk";
 
 const { height, width } = Dimensions.get('window');
 
@@ -25,6 +26,25 @@ const Login = (props) => {
   const [password, setPassword] = useState('');
 
   const { navigation, dispatch } = props;
+
+  const loginWithFacebook = () => {
+    
+    LoginManager.logInWithPermissions(["public_profile"]).then(
+      function(result) {
+        if (result.isCancelled) {
+          console.log("Login cancelled");
+        } else {
+          console.log(
+            "Login success with permissions: " +
+              result.grantedPermissions.toString()
+          );
+        }
+      },
+      function(error) {
+        console.log("Login fail with error: " + error);
+      }
+    );
+  }
 
   return (
     <View style={styles.container} >
@@ -63,7 +83,7 @@ const Login = (props) => {
         </View>
 
         <TouchableOpacity
-          onPress={() => true}
+          onPress={() => loginWithFacebook()}
           style={{
             justifyContent: 'center',
             alignItems: 'center',

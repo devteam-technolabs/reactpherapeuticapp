@@ -20,6 +20,7 @@
     "react-native-awesome-alerts": "^1.4.2",
     "react-native-confirmation-code-input": "^1.0.4",
     "react-native-dropdown-picker": "^3.7.1",
+    "react-native-fbsdk": "^3.0.0",
     "react-native-gesture-handler": "^1.8.0",
     "react-native-image-crop-picker": "^0.35.1",
     "react-native-indicators": "^0.17.0",
