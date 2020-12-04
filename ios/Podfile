@@ -9,7 +9,8 @@ target 'Pherapeutic' do
   pod 'react-native-google-maps', :path => rn_maps_path
   pod 'GoogleMaps'
   pod 'Google-Maps-iOS-Utils'
-
+  pod 'GoogleSignIn', '~> 5.0.2'
+  
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])

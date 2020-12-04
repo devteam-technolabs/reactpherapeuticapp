@@ -11,6 +11,11 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1D39BBDE2577A65300750159 /* libswiftWebKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D39BBA12577A65300750159 /* libswiftWebKit.tbd */; };
+		1D57BBD4257A5BF0009ED500 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D57BBD3257A5BF0009ED500 /* GoogleService-Info.plist */; };
+		1D57BBD5257A5BF0009ED500 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D57BBD3257A5BF0009ED500 /* GoogleService-Info.plist */; };
+		1D57BBD6257A5BF0009ED500 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D57BBD3257A5BF0009ED500 /* GoogleService-Info.plist */; };
+		1D57BBD7257A5BF0009ED500 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D57BBD3257A5BF0009ED500 /* GoogleService-Info.plist */; };
 		28C35B0C13A8F635D36E2648 /* libPods-Pherapeutic-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE0E6B153E85FB15B31DA39 /* libPods-Pherapeutic-tvOS.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -29,6 +34,69 @@
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = Pherapeutic;
+		};
+		1D39BBD62577A65300750159 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EC8F4D0BE3B0C192EBA4A93F8887D89F;
+			remoteInfo = FBSDKCoreKit;
+		};
+		1D39BBD82577A65300750159 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5DE0FEFC3995E740EC1AE2611D0AEFB0;
+			remoteInfo = FBSDKLoginKit;
+		};
+		1D39BBDA2577A65300750159 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 85128AF76199890A6DD56FE81089D883;
+			remoteInfo = FBSDKShareKit;
+		};
+		1D39BBDC2577A65300750159 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A21509A6082F6EA29D871EA72DAADCED;
+			remoteInfo = "react-native-fbsdk";
+		};
+		1D57BBBF257A5B64009ED500 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3FD1B4C1246D643E9476438C28048FA8;
+			remoteInfo = AppAuth;
+		};
+		1D57BBC1257A5B64009ED500 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6FD122EA0AB9AB2A8FFA5F676C795DF0;
+			remoteInfo = GTMAppAuth;
+		};
+		1D57BBC3257A5B64009ED500 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1998E0D8085221AD87F89B614C10E52;
+			remoteInfo = GTMSessionFetcher;
+		};
+		1D57BBC5257A5B64009ED500 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 97CE6A3FA04F0B3C1E0418A227804309;
+			remoteInfo = RNGoogleSignin;
+		};
+		1D78793C2578176A00565919 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA275BF62550353E009A72FC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 467EB07BB1D9636C6348DE0824CE8973;
+			remoteInfo = "react-native-geolocation";
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -337,6 +405,8 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Pherapeutic/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Pherapeutic/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Pherapeutic/main.m; sourceTree = "<group>"; };
+		1D39BBA12577A65300750159 /* libswiftWebKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftWebKit.tbd; path = usr/lib/swift/libswiftWebKit.tbd; sourceTree = SDKROOT; };
+		1D57BBD3257A5BF0009ED500 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* Pherapeutic-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pherapeutic-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* Pherapeutic-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pherapeutic-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3DB23FC00BC6262991C12C /* Pods-Pherapeutic-PherapeuticTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pherapeutic-PherapeuticTests.release.xcconfig"; path = "Target Support Files/Pods-Pherapeutic-PherapeuticTests/Pods-Pherapeutic-PherapeuticTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -370,6 +440,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D39BBDE2577A65300750159 /* libswiftWebKit.tbd in Frameworks */,
 				7C7AD556B285A502401EE2D3 /* libPods-Pherapeutic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +484,7 @@
 		13B07FAE1A68108700A75B9A /* Pherapeutic */ = {
 			isa = PBXGroup;
 			children = (
+				1D57BBD3257A5BF0009ED500 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -427,6 +499,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D39BBA12577A65300750159 /* libswiftWebKit.tbd */,
 				CA275BF62550353E009A72FC /* Pods.xcodeproj */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
@@ -489,12 +562,18 @@
 		CA275BF72550353E009A72FC /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				1D57BBC0257A5B64009ED500 /* libAppAuth.a */,
 				CA5E042725526A240084C960 /* libBVLinearGradient.a */,
 				CA275C272550353E009A72FC /* libDoubleConversion.a */,
 				CA275C292550353E009A72FC /* libFBReactNativeSpec.a */,
+				1D39BBD72577A65300750159 /* libFBSDKCoreKit.a */,
+				1D39BBD92577A65300750159 /* libFBSDKLoginKit.a */,
+				1D39BBDB2577A65300750159 /* libFBSDKShareKit.a */,
 				CA275C392550353E009A72FC /* libFolly.a */,
 				CA275C3B2550353E009A72FC /* libglog.a */,
 				CA92BE352566DC6200DBFCCD /* libGoogle-Maps-iOS-Utils.a */,
+				1D57BBC2257A5B64009ED500 /* libGTMAppAuth.a */,
+				1D57BBC4257A5B64009ED500 /* libGTMSessionFetcher.a */,
 				CA275C3D2550353E009A72FC /* libPods-Pherapeutic.a */,
 				CA275C3F2550353E009A72FC /* libPods-Pherapeutic-PherapeuticTests.a */,
 				CA275C412550353E009A72FC /* libPods-Pherapeutic-tvOS.a */,
@@ -507,6 +586,8 @@
 				CA275C4F2550353E009A72FC /* libReact-jsi.a */,
 				CA275C512550353E009A72FC /* libReact-jsiexecutor.a */,
 				CA275C532550353E009A72FC /* libReact-jsinspector.a */,
+				1D39BBDD2577A65300750159 /* libreact-native-fbsdk.a */,
+				1D78793D2578176A00565919 /* libreact-native-geolocation.a */,
 				CA92BE372566DC6200DBFCCD /* libreact-native-google-maps.a */,
 				CA92BE392566DC6200DBFCCD /* libreact-native-maps.a */,
 				CA5E042925526A240084C960 /* libreact-native-safe-area-context.a */,
@@ -523,6 +604,7 @@
 				CA5E042B25526A240084C960 /* libRNCAsyncStorage.a */,
 				CA5E042D25526A240084C960 /* libRNCMaskedView.a */,
 				CA5E042F25526A240084C960 /* libRNGestureHandler.a */,
+				1D57BBC6257A5B64009ED500 /* libRNGoogleSignin.a */,
 				CAE4E2A22566555C00B10182 /* libRNImageCropPicker.a */,
 				CAE4E2A42566555C00B10182 /* QBImagePicker.bundle */,
 				CA5E043125526A240084C960 /* libRNReanimated.a */,
@@ -673,6 +755,69 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		1D39BBD72577A65300750159 /* libFBSDKCoreKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFBSDKCoreKit.a;
+			remoteRef = 1D39BBD62577A65300750159 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D39BBD92577A65300750159 /* libFBSDKLoginKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFBSDKLoginKit.a;
+			remoteRef = 1D39BBD82577A65300750159 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D39BBDB2577A65300750159 /* libFBSDKShareKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFBSDKShareKit.a;
+			remoteRef = 1D39BBDA2577A65300750159 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D39BBDD2577A65300750159 /* libreact-native-fbsdk.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libreact-native-fbsdk.a";
+			remoteRef = 1D39BBDC2577A65300750159 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D57BBC0257A5B64009ED500 /* libAppAuth.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAppAuth.a;
+			remoteRef = 1D57BBBF257A5B64009ED500 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D57BBC2257A5B64009ED500 /* libGTMAppAuth.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGTMAppAuth.a;
+			remoteRef = 1D57BBC1257A5B64009ED500 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D57BBC4257A5B64009ED500 /* libGTMSessionFetcher.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGTMSessionFetcher.a;
+			remoteRef = 1D57BBC3257A5B64009ED500 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D57BBC6257A5B64009ED500 /* libRNGoogleSignin.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNGoogleSignin.a;
+			remoteRef = 1D57BBC5257A5B64009ED500 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D78793D2578176A00565919 /* libreact-native-geolocation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libreact-native-geolocation.a";
+			remoteRef = 1D78793C2578176A00565919 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		CA275C272550353E009A72FC /* libDoubleConversion.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -967,6 +1112,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D57BBD5257A5BF0009ED500 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -975,6 +1121,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				1D57BBD4257A5BF0009ED500 /* GoogleService-Info.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -984,6 +1131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
+				1D57BBD6257A5BF0009ED500 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -991,6 +1139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D57BBD7257A5BF0009ED500 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1006,6 +1155,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Pherapeutic/Pods-Pherapeutic-resources.sh",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/RNImageCropPicker/QBImagePicker.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/TOCropViewController/TOCropViewControllerBundle.bundle",
@@ -1014,6 +1164,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QBImagePicker.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TOCropViewControllerBundle.bundle",
@@ -1148,6 +1299,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Pherapeutic-PherapeuticTests/Pods-Pherapeutic-PherapeuticTests-resources.sh",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/RNImageCropPicker/QBImagePicker.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/TOCropViewController/TOCropViewControllerBundle.bundle",
@@ -1156,6 +1308,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QBImagePicker.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TOCropViewControllerBundle.bundle",
@@ -1307,12 +1460,16 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.0.15;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = YG6SRDRW2J;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Pherapeutic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1335,11 +1492,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.0.15;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = YG6SRDRW2J;
 				INFOPLIST_FILE = Pherapeutic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

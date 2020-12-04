@@ -1,4 +1,4 @@
-import React, { useEffect, useState, } from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
@@ -8,19 +8,22 @@ import {
   Image,
   TextInput,
   ScrollView,
-  KeyboardAvoidingView
+  KeyboardAvoidingView,
 } from 'react-native';
 import styles from './styles';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { validateEmail } from '../../utils/validateStrings';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {validateEmail} from '../../utils/validateStrings';
 import AwesomeAlert from 'react-native-awesome-alerts';
 import Geolocation from '@react-native-community/geolocation';
 import constants from '../../utils/constants';
 import Events from '../../utils/events';
 import APICaller from '../../utils/APICaller';
 import SubmitButton from '../../components/submitButton';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {saveUser} from '../../redux/actions/user';
+import {connect} from 'react-redux';
 
-const { height, width } = Dimensions.get('window');
+const {height, width} = Dimensions.get('window');
 
 const SignUp = (props) => {
   const [first_name, setFirstName] = useState('');
@@ -45,90 +48,136 @@ const SignUp = (props) => {
   const [alertMessage, setAlert] = useState('Please Fill All Fields');
   const [readyToSubmit, setReadyToSibmit] = useState(true);
 
-  const { navigation } = props;
+  const {navigation, route, dispatch} = props;
+  const {params} = route;
+
+  // const {params} = props.navigation.state;
 
   useEffect(() => {
     getLanguages();
     getSpecialities();
-  }, [])
+
+    if (params && (params.fbtoken || params.googletoken)) {
+      setFirstName(params.first_name);
+      setLastName(params.last_name);
+      setEmail(params.email);
+    }
+  }, []);
 
   const getLanguages = () => {
     APICaller('getLanguages', 'GET')
-      .then(response => {
-        console.log("response getting languages => ", response);
-        const { data, message, status, statusCode } = response['data'];
+      .then((response) => {
+        console.log('response getting languages => ', response);
+        const {data, message, status, statusCode} = response['data'];
         if (status === 'success') {
           storeLanguages([...data]);
         }
       })
-      .catch(error => {
-        console.log("error getting languages => ", error)
-      })
-  }
+      .catch((error) => {
+        console.log('error getting languages => ', error);
+      });
+  };
 
   const getCurrentCoordinates = async () => {
-    await Geolocation.getCurrentPosition(info => storeLocation(info));
+    await Geolocation.getCurrentPosition((info) => storeLocation(info));
     console.log('location is', location);
   };
 
   const getSpecialities = () => {
     APICaller('getTherapistTypes', 'GET')
-      .then(response => {
-        console.log("response getting specialiites => ", response);
-        const { data, message, status, statusCode } = response['data'];
+      .then((response) => {
+        console.log('response getting specialiites => ', response);
+        const {data, message, status, statusCode} = response['data'];
         if (status === 'success') {
           storeSpecialities([...data]);
         }
       })
-      .catch(error => {
-        console.log("error getting specialiites => ", error)
-      })
-  }
+      .catch((error) => {
+        console.log('error getting specialiites => ', error);
+      });
+  };
 
   const registerUser = async () => {
-    Events.trigger("showModalLoader")
-    const registerObj = {
+    Events.trigger('showModalLoader');
+
+    var latitude = '56';
+    var longitude = '555';
+
+    if (location && location.coords) {
+      latitude = location.coords.latitude;
+      longitude = location.coords.longitude;
+    }
+
+    var registerObj = {
       first_name,
       last_name,
       email,
       password,
       confirm_password,
-      role: role == 'Client' ? "0" : "1",
+      role: role == 'Client' ? '0' : '1',
       languages: [language_id],
 
       experience: years,
       specialism: [speciality_id],
 
-      device_type: "1",
-      fcm_token: "poiytr4677y7ttgtttg",
-      qualification: "5",
-      address: "ABC place",
-      latitude: location.coords.latitude,
-      longitude: location.coords.longitude,
-    }
+      device_type: '1',
+      fcm_token: 'poiytr4677y7ttgtttg',
+      qualification: '5',
+      address: 'ABC place',
+      latitude: latitude,
+      longitude: longitude,
+    };
+    if (params && (params.fbtoken || params.googletoken)) {
+      if (params.fbtoken) {
+        registerObj.social_token = params.fbtoken;
+        registerObj.login_type = 2;
+      } else if (params.googletoken) {
+        registerObj.social_token = params.googletoken;
+        registerObj.login_type = 1;
+      }
 
-    console.log('register object => ', registerObj)
-    APICaller('register', 'POST', registerObj)
-      .then(response => {
-        Events.trigger("hideModalLoader");
+      // only for testing purpose
+      // registerObj.social_token = '867672634855435435633847';
+      // registerObj.email = 'abcd454837554544@gmail.com';
+      // registerObj.login_type = 2;
+    }
+    console.log('register object => ', registerObj);
+    // alert(JSON.stringify(registerObj));
+    APICaller(
+      params && (params.fbtoken || params.googletoken)
+        ? 'socialLogin'
+        : 'register',
+      'POST',
+      registerObj,
+    )
+      .then((response) => {
+        Events.trigger('hideModalLoader');
         console.warn('response after register => ', response);
-        const { data, message, status, statusCode } = response['data']
+        const {data, message, status, statusCode} = response['data'];
         // const { message } = data;
-        if (message === "Your account created successfully.") {
-          navigation.navigate('VerifyEmail', { user_id: data['user_id'] })
+
+        if (params && (params.fbtoken || params.googletoken)) {
+          AsyncStorage.setItem('userData', JSON.stringify(data));
+          dispatch(saveUser(data));
+          navigation.navigate('Onboarding');
+        } else if (message === 'Your account created successfully.') {
+          navigation.navigate('VerifyEmail', {user_id: data['user_id']});
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.warn('error after register => ', error);
-        const { data } = error;
-        Events.trigger("hideModalLoader")
-        setAlert(data.message);
-        setShowAlert(true)
-      })
-  }
+        const {data} = error;
+        if (data) {
+          Events.trigger('hideModalLoader');
+          setAlert(data.message);
+          setShowAlert(true);
+        }
+      });
+  };
 
   const signUpHandler = () => {
-    if (first_name &&
+    if (
+      first_name &&
       last_name &&
       email &&
       password &&
@@ -137,12 +186,12 @@ const SignUp = (props) => {
       language_id &&
       password === confirm_password
     ) {
-      if (role == "Therapist") {
+      if (role == 'Therapist') {
         if (!years) {
-          setAlert('Please Enter Total Experience.')
-          setShowAlert(true)
+          setAlert('Please Enter Total Experience.');
+          setShowAlert(true);
         } else if (!selectedSpeciality) {
-          setAlert('Please Select Speciality')
+          setAlert('Please Select Speciality');
           setShowAlert(true);
         } else {
           // call api
@@ -153,120 +202,102 @@ const SignUp = (props) => {
         registerUser();
       }
     } else {
-      if (!first_name)
-        setAlert('Please Enter First Name.')
-      else if (!last_name)
-        setAlert('Please Enter Last Name.')
-      else if (!email)
-        setAlert('Please Enter Email Address.')
-      else if (emailError)
-        setAlert('Please Enter Valid Email Address.')
-      else if (!password)
-        setAlert('Please Enter Password.')
-      else if (!confirm_password)
-        setAlert('Please Enter Confirm Password.')
+      if (!first_name) setAlert('Please Enter First Name.');
+      else if (!last_name) setAlert('Please Enter Last Name.');
+      else if (!email) setAlert('Please Enter Email Address.');
+      else if (emailError) setAlert('Please Enter Valid Email Address.');
+      else if (!password) setAlert('Please Enter Password.');
+      else if (!confirm_password) setAlert('Please Enter Confirm Password.');
       else if (confirm_password !== password)
-        setAlert('Please Enter Same Password.')
-      else if (!role)
-        setAlert('Please Select Your Role.')
-      else if (!language)
-        setAlert('Please Select Your Language.')
-      setShowAlert(true)
+        setAlert('Please Enter Same Password.');
+      else if (!role) setAlert('Please Select Your Role.');
+      else if (!language) setAlert('Please Select Your Language.');
+      setShowAlert(true);
     }
-  }
+  };
 
   const ListView = () => (
-    <View style={{ justifyContent: 'center', alignItems: 'center' }} >
-      {
-        languages.map(lang => {
-          console.log("!!!!!!!!!!")
-          return (
-            <TouchableOpacity
-              onPress={() => {
-                setLanguage_id(lang['id']);
-                setLanguage(lang['title'])
-                setShowLanguages(false)
-              }}
-              style={{
-                height: Dimensions.get('window').height * 0.05,
-                width: Dimensions.get('window').width * 0.6,
-                paddingHorizontal: 2,
-                justifyContent: 'center',
-                alignItems: 'flex-start'
-              }}
-            >
-              <Text>{lang['title']}</Text>
-            </TouchableOpacity>
-          )
-        }
-        )
-      }
+    <View style={{justifyContent: 'center', alignItems: 'center'}}>
+      {languages.map((lang) => {
+        console.log('!!!!!!!!!!');
+        return (
+          <TouchableOpacity
+            onPress={() => {
+              setLanguage_id(lang['id']);
+              setLanguage(lang['title']);
+              setShowLanguages(false);
+            }}
+            style={{
+              height: Dimensions.get('window').height * 0.05,
+              width: Dimensions.get('window').width * 0.6,
+              paddingHorizontal: 2,
+              justifyContent: 'center',
+              alignItems: 'flex-start',
+            }}>
+            <Text>{lang['title']}</Text>
+          </TouchableOpacity>
+        );
+      })}
     </View>
-  )
+  );
 
   const SpecialitiesList = () => (
-    <View style={{ justifyContent: 'center', alignItems: 'center' }} >
-      {
-        specialities.map(speciality => {
-          console.log("!!!!!!!!!!")
-          return (
-            <TouchableOpacity
-              onPress={() => {
-                setSpeciality_id(speciality['id']);
-                setSpeciality(speciality['title'])
-                setShowSpecialism(false)
-              }}
-              style={{
-                height: Dimensions.get('window').height * 0.05,
-                width: Dimensions.get('window').width * 0.6,
-                paddingHorizontal: 2,
-                justifyContent: 'center',
-                alignItems: 'flex-start'
-              }}
-            >
-              <Text>{speciality['title']}</Text>
-            </TouchableOpacity>
-          )
-        }
-        )
-      }
+    <View style={{justifyContent: 'center', alignItems: 'center'}}>
+      {specialities.map((speciality) => {
+        console.log('!!!!!!!!!!');
+        return (
+          <TouchableOpacity
+            onPress={() => {
+              setSpeciality_id(speciality['id']);
+              setSpeciality(speciality['title']);
+              setShowSpecialism(false);
+            }}
+            style={{
+              height: Dimensions.get('window').height * 0.05,
+              width: Dimensions.get('window').width * 0.6,
+              paddingHorizontal: 2,
+              justifyContent: 'center',
+              alignItems: 'flex-start',
+            }}>
+            <Text>{speciality['title']}</Text>
+          </TouchableOpacity>
+        );
+      })}
     </View>
-  )
+  );
 
   const Roles = () => (
-    <View style={{ justifyContent: 'center', alignItems: 'center' }} >
+    <View style={{justifyContent: 'center', alignItems: 'center'}}>
       <TouchableOpacity
         onPress={() => {
           setRole('Client');
-          setShowRoles(false)
+          setShowRoles(false);
         }}
         style={{
           height: Dimensions.get('window').height * 0.05,
           width: Dimensions.get('window').width * 0.6,
           paddingHorizontal: 2,
           justifyContent: 'center',
-          alignItems: 'flex-start'
-        }}
-      >
+          alignItems: 'flex-start',
+        }}>
         <Text>Client</Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {
           setRole('Therapist');
-          setShowRoles(false)
+          setShowRoles(false);
         }}
         style={{
           height: Dimensions.get('window').height * 0.05,
           width: Dimensions.get('window').width * 0.6,
           paddingHorizontal: 2,
           justifyContent: 'center',
-          alignItems: 'flex-start'
-        }}
-      >
+          alignItems: 'flex-start',
+        }}>
         <Text>Therapist</Text>
       </TouchableOpacity>
     </View>
-  )
+  );
 
   return (
     // <KeyboardAwareScrollView
@@ -275,81 +306,95 @@ const SignUp = (props) => {
     //   keyboardVerticalOffset={'60'}
     //   behavior={'padding'}
     // >
-    <View style={{ flex: 1 }}>
-      <Image source={constants.images.background} resizeMode={'stretch'} style={styles.containerBackground} />
+    <View style={{flex: 1}}>
+      <Image
+        source={constants.images.background}
+        resizeMode={'stretch'}
+        style={styles.containerBackground}
+      />
 
-      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.container} >
-
-        <Image source={constants.images.formsBackground} resizeMode={'stretch'} style={styles.formsBackground} />
-        <View style={styles.backButtonView} >
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.container}>
+        <Image
+          source={constants.images.formsBackground}
+          resizeMode={'stretch'}
+          style={styles.formsBackground}
+        />
+        <View style={styles.backButtonView}>
           <TouchableOpacity
             onPress={() => navigation.goBack()}
-            style={{ flex: 1.5, justifyContent: 'center', alignItems: 'center' }}
-          >
+            style={{flex: 1.5, justifyContent: 'center', alignItems: 'center'}}>
             {/* <Image source={constants.images.backIcon} style={{ height: 18, width: 10, margin: 10 }} /> */}
           </TouchableOpacity>
-          <View style={{ flex: 7, justifyContent: 'center', alignItems: 'center', }} >
+          <View
+            style={{flex: 7, justifyContent: 'center', alignItems: 'center'}}>
             <Image
               source={constants.images.logo}
               resizeMode={'contain'}
               style={{
                 height: Dimensions.get('window').height * 0.09,
-                width: Dimensions.get('window').width * 0.75
-              }} />
+                width: Dimensions.get('window').width * 0.75,
+              }}
+            />
           </View>
-          <View style={{ flex: 1.5 }} />
+          <View style={{flex: 1.5}} />
         </View>
-        <View style={styles.formView} >
-          <View style={styles.formWrap} >
-
-            <View style={styles.formField} >
-              <Text style={styles.fieldName} >FIRST NAME</Text>
-              <View style={styles.fieldInputWrap} >
+        <View style={styles.formView}>
+          <View style={styles.formWrap}>
+            <View style={styles.formField}>
+              <Text style={styles.fieldName}>FIRST NAME</Text>
+              <View style={styles.fieldInputWrap}>
                 <TextInput
                   style={styles.fieldInput}
-                  onChangeText={text => setFirstName(text)}
+                  onChangeText={(text) => setFirstName(text)}
                   value={first_name}
                   autoCompleteType={'off'}
                   autoCorrect={false}
+                  editable={!(params && (params.fbtoken || params.googletoken))}
                   onFocus={() => getCurrentCoordinates()}
                 />
               </View>
             </View>
 
-            <View style={styles.formField} >
-              <Text style={styles.fieldName} >LAST NAME</Text>
-              <View style={styles.fieldInputWrap} >
+            <View style={styles.formField}>
+              <Text style={styles.fieldName}>LAST NAME</Text>
+              <View style={styles.fieldInputWrap}>
                 <TextInput
                   style={styles.fieldInput}
-                  onChangeText={text => setLastName(text)}
+                  onChangeText={(text) => setLastName(text)}
                   value={last_name}
+                  editable={!(params && (params.fbtoken || params.googletoken))}
                   autoCompleteType={'off'}
                   autoCorrect={false}
                 />
               </View>
             </View>
-            <View style={styles.formField} >
-              <Text style={styles.fieldName} >EMAIL ADDRESS</Text>
-              <View style={styles.fieldInputWrap} >
+            <View style={styles.formField}>
+              <Text style={styles.fieldName}>EMAIL ADDRESS</Text>
+              <View style={styles.fieldInputWrap}>
                 <TextInput
                   style={styles.fieldInput}
-                  onChangeText={text => setEmail(text)}
+                  onChangeText={(text) => setEmail(text)}
                   value={email}
                   autoCompleteType={'off'}
                   autoCorrect={false}
+                  editable={!(params && (params.fbtoken || params.googletoken))}
                   autoCapitalize={'none'}
-                  onBlur={() => { if (email.length) setEmailError(validateEmail(email)) }}
+                  onBlur={() => {
+                    if (email.length) setEmailError(validateEmail(email));
+                  }}
                 />
               </View>
             </View>
 
-            <View style={styles.formField} >
-              <Text style={styles.fieldName} >CREATE PASSWORD</Text>
-              <View style={styles.fieldInputWrap} >
+            <View style={styles.formField}>
+              <Text style={styles.fieldName}>CREATE PASSWORD</Text>
+              <View style={styles.fieldInputWrap}>
                 <TextInput
                   style={styles.fieldInput}
                   secureTextEntry={true}
-                  onChangeText={text => setPassword(text)}
+                  onChangeText={(text) => setPassword(text)}
                   value={password}
                   autoCompleteType={'off'}
                   autoCorrect={false}
@@ -357,9 +402,9 @@ const SignUp = (props) => {
               </View>
             </View>
 
-            <View style={styles.formField} >
-              <Text style={styles.fieldName} >CONFIRM PASSWORD</Text>
-              <View style={styles.fieldInputWrap} >
+            <View style={styles.formField}>
+              <Text style={styles.fieldName}>CONFIRM PASSWORD</Text>
+              <View style={styles.fieldInputWrap}>
                 {/* <TextInput
                   style={styles.fieldInput}
                   secureTextEntry={true}
@@ -371,79 +416,96 @@ const SignUp = (props) => {
                 <TextInput
                   style={styles.fieldInput}
                   secureTextEntry={true}
-                  onChangeText={text => setConfirmPassword(text)}
-                  value={confirm_password}
-                ></TextInput>
+                  onChangeText={(text) => setConfirmPassword(text)}
+                  value={confirm_password}></TextInput>
               </View>
             </View>
 
-            <View style={styles.formField} >
-              <Text style={styles.fieldName} >ARE YOU A THERAPIST OR A CLIENT?</Text>
-              <View style={styles.fieldInputWrap} >
+            <View style={styles.formField}>
+              <Text style={styles.fieldName}>
+                ARE YOU A THERAPIST OR A CLIENT?
+              </Text>
+              <View style={styles.fieldInputWrap}>
                 <TextInput
-                  style={[styles.fieldInput, { width: Dimensions.get("window").width * 0.7 }]}
-                  onChangeText={text => setLanguage(text)}
+                  style={[
+                    styles.fieldInput,
+                    {width: Dimensions.get('window').width * 0.7},
+                  ]}
+                  onChangeText={(text) => setLanguage(text)}
                   value={role}
                   editable={false}
                   autoCompleteType={'off'}
                   autoCorrect={false}
                 />
-                <TouchableOpacity onPress={() => setShowRoles(true)} >
-                  <Image style={{ height: 25, width: 25, margin: 3 }} source={constants.images.downArrow} />
+                <TouchableOpacity onPress={() => setShowRoles(true)}>
+                  <Image
+                    style={{height: 25, width: 25, margin: 3}}
+                    source={constants.images.downArrow}
+                  />
                 </TouchableOpacity>
               </View>
             </View>
 
-            {
-              role == "Therapist"
-                ?
-                <View style={{ justifyContent: 'center', alignItems: 'center' }} >
-                  <View style={styles.formField} >
-                    <Text style={styles.fieldName} >SPECIALISM</Text>
-                    <View style={styles.fieldInputWrap} >
-                      <TextInput
-                        style={[styles.fieldInput, { width: Dimensions.get("window").width * 0.7 }]}
-                        // onChangeText={text => setLanguage(text)}
-                        value={selectedSpeciality}
-                        editable={false}
-                        autoCompleteType={'off'}
-                        autoCorrect={false}
+            {role == 'Therapist' ? (
+              <View style={{justifyContent: 'center', alignItems: 'center'}}>
+                <View style={styles.formField}>
+                  <Text style={styles.fieldName}>SPECIALISM</Text>
+                  <View style={styles.fieldInputWrap}>
+                    <TextInput
+                      style={[
+                        styles.fieldInput,
+                        {width: Dimensions.get('window').width * 0.7},
+                      ]}
+                      // onChangeText={text => setLanguage(text)}
+                      value={selectedSpeciality}
+                      editable={false}
+                      autoCompleteType={'off'}
+                      autoCorrect={false}
+                    />
+                    <TouchableOpacity onPress={() => setShowSpecialism(true)}>
+                      <Image
+                        style={{height: 25, width: 25, margin: 3}}
+                        source={constants.images.downArrow}
                       />
-                      <TouchableOpacity onPress={() => setShowSpecialism(true)} >
-                        <Image style={{ height: 25, width: 25, margin: 3 }} source={constants.images.downArrow} />
-                      </TouchableOpacity>
-                    </View>
-                  </View>
-
-                  <View style={styles.formField} >
-                    <Text style={styles.fieldName} >YEARS OF EXPERIENCE</Text>
-                    <View style={styles.fieldInputWrap} >
-                      <TextInput
-                        style={styles.fieldInput}
-                        onChangeText={text => setYears(text)}
-                        value={years}
-                        autoCompleteType={'off'}
-                        autoCorrect={false}
-                        keyboardType={'number-pad'}
-                      />
-                    </View>
+                    </TouchableOpacity>
                   </View>
                 </View>
-                :
-                <View />
-            }
 
-            <View style={styles.formField} >
-              <Text style={styles.fieldName} >LANGUAGE YOU SPEAK</Text>
-              <View style={styles.fieldInputWrap} >
+                <View style={styles.formField}>
+                  <Text style={styles.fieldName}>YEARS OF EXPERIENCE</Text>
+                  <View style={styles.fieldInputWrap}>
+                    <TextInput
+                      style={styles.fieldInput}
+                      onChangeText={(text) => setYears(text)}
+                      value={years}
+                      autoCompleteType={'off'}
+                      autoCorrect={false}
+                      keyboardType={'number-pad'}
+                    />
+                  </View>
+                </View>
+              </View>
+            ) : (
+              <View />
+            )}
+
+            <View style={styles.formField}>
+              <Text style={styles.fieldName}>LANGUAGE YOU SPEAK</Text>
+              <View style={styles.fieldInputWrap}>
                 <TextInput
-                  style={[styles.fieldInput, { width: Dimensions.get("window").width * 0.7 }]}
-                  onChangeText={text => setLanguage(text)}
+                  style={[
+                    styles.fieldInput,
+                    {width: Dimensions.get('window').width * 0.7},
+                  ]}
+                  onChangeText={(text) => setLanguage(text)}
                   value={language}
                   editable={false}
                 />
-                <TouchableOpacity onPress={() => setShowLanguages(true)} >
-                  <Image style={{ height: 25, width: 25, margin: 3 }} source={constants.images.downArrow} />
+                <TouchableOpacity onPress={() => setShowLanguages(true)}>
+                  <Image
+                    style={{height: 25, width: 25, margin: 3}}
+                    source={constants.images.downArrow}
+                  />
                 </TouchableOpacity>
               </View>
             </View>
@@ -454,14 +516,21 @@ const SignUp = (props) => {
             />
           </View>
         </View>
-        <View style={styles.footerView} >
-          <Text style={styles.footerText} >Already signed up? <Text
-            onPress={() => navigation.navigate('Login')}
-            style={styles.footerlinkText}
-          >Login</Text></Text>
-          <Text style={styles.footerLinkTextBottom} >By continuing, you agree to our <Text
-            style={{ borderBottomColor: '#ffffff', borderBottomWidth: 1 }}
-          >Terms & Conditions.</Text></Text>
+        <View style={styles.footerView}>
+          <Text style={styles.footerText}>
+            Already signed up?{' '}
+            <Text
+              onPress={() => navigation.navigate('Login')}
+              style={styles.footerlinkText}>
+              Login
+            </Text>
+          </Text>
+          <Text style={styles.footerLinkTextBottom}>
+            By continuing, you agree to our{' '}
+            <Text style={{borderBottomColor: '#ffffff', borderBottomWidth: 1}}>
+              Terms & Conditions.
+            </Text>
+          </Text>
         </View>
       </ScrollView>
 
@@ -469,10 +538,10 @@ const SignUp = (props) => {
         show={showRoles}
         closeOnTouchOutside={true}
         onConfirmPressed={() => {
-          setShowRoles(false)
+          setShowRoles(false);
         }}
         onDismiss={() => {
-          setShowRoles(false)
+          setShowRoles(false);
         }}
         customView={<Roles />}
       />
@@ -481,10 +550,10 @@ const SignUp = (props) => {
         show={showLanguages}
         closeOnTouchOutside={true}
         onConfirmPressed={() => {
-          setShowLanguages(false)
+          setShowLanguages(false);
         }}
         onDismiss={() => {
-          setShowLanguages(false)
+          setShowLanguages(false);
         }}
         customView={<ListView />}
       />
@@ -492,10 +561,10 @@ const SignUp = (props) => {
         show={showSpecialism}
         closeOnTouchOutside={true}
         onConfirmPressed={() => {
-          setShowSpecialism(false)
+          setShowSpecialism(false);
         }}
         onDismiss={() => {
-          setShowSpecialism(false)
+          setShowSpecialism(false);
         }}
         customView={<SpecialitiesList />}
       />
@@ -520,7 +589,6 @@ const SignUp = (props) => {
       />
     </View>
     // </KeyboardAwareScrollView>
-  )
+  );
 };
-
-export default SignUp;
+export default connect()(SignUp);
